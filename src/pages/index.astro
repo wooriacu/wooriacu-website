@@ -195,13 +195,16 @@
       }
 
       .about-image {
-        background: #e9ecef;
         height: 300px;
         border-radius: 10px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: #6c757d;
+        overflow: hidden;
+      }
+
+      .about-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 10px;
       }
 
       .contact-info {
@@ -263,8 +266,8 @@
           <li><a href="#contact">Contact</a></li>
         </ul>
         <div class="language-selector">
-          <a href="/" class="active">EN</a>
-          <a href="/es/">ES</a>
+          <a href="/" class="active">English</a>
+          <a href="/es/">Español</a>
         </div>
       </nav>
     </header>
@@ -321,7 +324,10 @@
             </p>
           </div>
           <div class="about-image">
-            <p>Clinic Interior Photo</p>
+            <img
+              src="/woori-acu-clinic-1-optimized.jpg"
+              alt="Woori Acupuncture Clinic Interior"
+            />
           </div>
         </div>
       </div>
