@@ -6,13 +6,89 @@
   <head>
     <meta charset="utf-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="generator" content={Astro.generator} />
-    <title>Woori Acupuncture Clinic - Traditional Korean Medicine</title>
-    <meta
-      name="description"
-      content="Professional acupuncture and traditional Korean medicine services in California. Restore your health with experienced practitioners."
-    />
+    
+    <!-- Primary Meta Tags -->
+    <title>Woori Acupuncture - Traditional Korean Medicine & Acupuncture in Riverside, CA</title>
+    <meta name="title" content="Woori Acupuncture - Traditional Korean Medicine & Acupuncture in Riverside, CA" />
+    <meta name="description" content="Professional acupuncture and traditional Korean herbal medicine services in Riverside, California. Expert practitioners offering personalized treatments for pain relief, wellness, and natural healing." />
+    <meta name="keywords" content="acupuncture, Korean medicine, herbal medicine, pain relief, traditional medicine, Riverside CA, natural healing, wellness, holistic health" />
+    <meta name="author" content="Woori Acupuncture" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://wooriacu.github.io/" />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://wooriacu.github.io/" />
+    <meta property="og:title" content="Woori Acupuncture - Traditional Korean Medicine & Acupuncture in Riverside, CA" />
+    <meta property="og:description" content="Professional acupuncture and traditional Korean herbal medicine services in Riverside, California. Expert practitioners offering personalized treatments for pain relief, wellness, and natural healing." />
+    <meta property="og:image" content="https://wooriacu.github.io/woori-acu-clinic-1-optimized.jpg" />
+    <meta property="og:site_name" content="Woori Acupuncture" />
+    <meta property="og:locale" content="en_US" />
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://wooriacu.github.io/" />
+    <meta property="twitter:title" content="Woori Acupuncture - Traditional Korean Medicine & Acupuncture in Riverside, CA" />
+    <meta property="twitter:description" content="Professional acupuncture and traditional Korean herbal medicine services in Riverside, California. Expert practitioners offering personalized treatments for pain relief, wellness, and natural healing." />
+    <meta property="twitter:image" content="https://wooriacu.github.io/woori-acu-clinic-1-optimized.jpg" />
+    
+    <!-- Additional SEO Tags -->
+    <meta name="geo.region" content="US-CA" />
+    <meta name="geo.placename" content="Riverside" />
+    <meta name="geo.position" content="33.9466568;-117.3915209" />
+    <meta name="ICBM" content="33.9466568, -117.3915209" />
+    
+    <!-- Language and Alternate URLs -->
+    <link rel="alternate" href="https://wooriacu.github.io/" hreflang="en" />
+    <link rel="alternate" href="https://wooriacu.github.io/es/" hreflang="es" />
+    <link rel="alternate" href="https://wooriacu.github.io/" hreflang="x-default" />
+    
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "MedicalBusiness",
+      "name": "Woori Acupuncture",
+      "image": "https://wooriacu.github.io/woori-acu-clinic-1-optimized.jpg",
+      "description": "Professional acupuncture and traditional Korean herbal medicine services in Riverside, California.",
+      "url": "https://wooriacu.github.io/",
+      "telephone": "+19517771011",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "3579 Arlington Ave Suite 900",
+        "addressLocality": "Riverside",
+        "addressRegion": "CA",
+        "postalCode": "92506",
+        "addressCountry": "US"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 33.9466568,
+        "longitude": -117.3915209
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+          "opens": "09:00",
+          "closes": "18:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "Saturday",
+          "opens": "09:00",
+          "closes": "15:00"
+        }
+      ],
+      "sameAs": [
+        "https://www.google.com/maps/place/Woori+Acupuncture/@33.9466568,-117.3921646,19z/"
+      ],
+      "medicalSpecialty": ["Acupuncture", "Traditional Korean Medicine", "Herbal Medicine"],
+      "priceRange": "$$"
+    }
+    </script>
     <style>
       * {
         margin: 0;
@@ -207,6 +283,16 @@
         border-radius: 10px;
       }
 
+      /* SEO-friendly link styles */
+      a[href^="tel:"] {
+        color: inherit;
+        text-decoration: underline;
+      }
+
+      a[href^="tel:"]:hover {
+        color: #ff6b35;
+      }
+
       .contact-info {
         background: #2c5530;
         color: white;
@@ -281,87 +367,90 @@
       <a href="#contact" class="cta-button">Schedule Appointment</a>
     </section>
 
-    <section class="section" id="services">
+    <section class="section" id="services" aria-labelledby="services-heading">
       <div class="container">
-        <h2>Our Services</h2>
+        <h2 id="services-heading">Our Professional Services</h2>
         <div class="services">
-          <div class="service-card">
-            <div class="icon">🪡</div>
-            <h3>Acupuncture</h3>
+          <article class="service-card">
+            <div class="icon" aria-hidden="true">🪡</div>
+            <h3>Traditional Acupuncture Therapy</h3>
             <p>
-              Traditional acupuncture for pain relief and overall health
-              improvement through precise needle placement at specific
-              acupoints.
+              Experience authentic traditional acupuncture for effective pain relief and overall health
+              improvement through precise needle placement at specific therapeutic
+              acupoints. Our licensed practitioners use sterile, single-use needles for safe and effective treatment.
             </p>
-          </div>
-          <div class="service-card">
-            <div class="icon">🌿</div>
-            <h3>Herbal Medicine</h3>
+          </article>
+          <article class="service-card">
+            <div class="icon" aria-hidden="true">🌿</div>
+            <h3>Korean Herbal Medicine</h3>
             <p>
-              Personalized herbal prescriptions using traditional Korean
-              medicine principles for comprehensive treatment.
+              Receive personalized herbal prescriptions using time-tested traditional Korean
+              medicine principles for comprehensive treatment. Our custom herbal formulas target the root cause of health issues for lasting wellness.
             </p>
-          </div>
+          </article>
         </div>
       </div>
     </section>
 
-    <section class="section about" id="about">
+    <section class="section about" id="about" aria-labelledby="about-heading">
       <div class="container">
-        <h2>About Us</h2>
+        <h2 id="about-heading">About Woori Acupuncture - Your Trusted Korean Medicine Clinic</h2>
         <div class="about-content">
           <div class="about-text">
             <p>
-              We combine traditional Korean medicine with modern therapeutic
-              techniques to provide the best care for our patients. With years
-              of experience, we offer personalized treatments tailored to each
-              patient's individual condition for fundamental health recovery.
+              <strong>Woori Acupuncture</strong> combines authentic traditional Korean medicine with modern therapeutic
+              techniques to provide the highest quality care for our patients in Riverside, California. With years
+              of experience and specialized training, we offer personalized treatments tailored to each
+              patient's individual condition for fundamental health recovery and long-term wellness.
             </p>
             <p>
-              Our approach focuses on treating the root cause of health issues
-              rather than just symptoms, promoting long-term wellness and
-              natural healing processes.
+              Our holistic approach focuses on treating the root cause of health issues
+              rather than just managing symptoms, promoting natural healing processes and
+              sustainable wellness. We are committed to helping you achieve optimal health through time-tested traditional methods.
             </p>
           </div>
           <div class="about-image">
             <img
               src="/woori-acu-clinic-1-optimized.jpg"
-              alt="Woori Acupuncture Clinic Interior"
+              alt="Professional acupuncture treatment room at Woori Acupuncture clinic in Riverside, California"
+              loading="lazy"
+              width="400"
+              height="300"
             />
           </div>
         </div>
       </div>
     </section>
 
-    <section class="section contact-info" id="contact">
+    <section class="section contact-info" id="contact" aria-labelledby="contact-heading">
       <div class="container">
-        <h2 style="color: white;">Contact Information</h2>
+        <h2 id="contact-heading" style="color: white;">Contact Woori Acupuncture - Schedule Your Appointment</h2>
         <div class="contact-grid">
-          <div class="contact-item">
-            <div class="icon">📍</div>
-            <h3>Location</h3>
-            <p>
+          <article class="contact-item">
+            <div class="icon" aria-hidden="true">📍</div>
+            <h3>Clinic Location</h3>
+            <address>
               3579 Arlington Ave Suite 900<br />
               Riverside, California 92506
-            </p>
-          </div>
-          <div class="contact-item">
-            <div class="icon">📞</div>
-            <h3>Phone</h3>
+            </address>
+          </article>
+          <article class="contact-item">
+            <div class="icon" aria-hidden="true">📞</div>
+            <h3>Phone Numbers</h3>
             <p>
-              Office: (951) 777-1011<br />
-              Mobile: (714) 261-0605<br />
+              Office: <a href="tel:+19517771011" rel="nofollow">(951) 777-1011</a><br />
+              Mobile: <a href="tel:+17142610605" rel="nofollow">(714) 261-0605</a><br />
             </p>
-          </div>
-          <div class="contact-item">
-            <div class="icon">🕐</div>
-            <h3>Hours</h3>
-            <p>
+          </article>
+          <article class="contact-item">
+            <div class="icon" aria-hidden="true">🕐</div>
+            <h3>Business Hours</h3>
+            <div>
               Monday-Friday: 9:00 AM - 6:00 PM<br />
               Saturday: 9:00 AM - 3:00 PM<br />
               Sunday: Closed
-            </p>
-          </div>
+            </div>
+          </article>
         </div>
       </div>
     </section>
