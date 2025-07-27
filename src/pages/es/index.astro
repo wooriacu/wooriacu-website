@@ -3,340 +3,367 @@
 ---
 
 <html lang="es">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Woori Acupuntura - Clínica de Medicina Tradicional Coreana</title>
-		<meta name="description" content="Servicios profesionales de acupuntura y medicina tradicional coreana en California. Restaure su salud con profesionales experimentados." />
-		<style>
-			* {
-				margin: 0;
-				padding: 0;
-				box-sizing: border-box;
-			}
-			
-			html {
-				scroll-behavior: smooth;
-			}
-			
-			body {
-				font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-				line-height: 1.6;
-				color: #333;
-				background-color: #f8f9fa;
-			}
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Woori Acupuntura - Clínica de Medicina Tradicional Coreana</title>
+    <meta
+      name="description"
+      content="Servicios profesionales de acupuntura y medicina tradicional coreana en California. Restaure su salud con profesionales experimentados."
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
 
-			header {
-				background: linear-gradient(135deg, #2c5530 0%, #4a7c59 100%);
-				color: white;
-				padding: 1rem 0;
-				box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-			}
+      html {
+        scroll-behavior: smooth;
+      }
 
-			nav {
-				max-width: 1200px;
-				margin: 0 auto;
-				display: flex;
-				justify-content: space-between;
-				align-items: center;
-				padding: 0 2rem;
-			}
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        line-height: 1.6;
+        color: #333;
+        background-color: #f8f9fa;
+      }
 
-			.logo {
-				font-size: 1.8rem;
-				font-weight: bold;
-			}
+      header {
+        background: linear-gradient(135deg, #2c5530 0%, #4a7c59 100%);
+        color: white;
+        padding: 1rem 0;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      }
 
-			.nav-center {
-				display: flex;
-				list-style: none;
-				gap: 2rem;
-			}
+      nav {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 2rem;
+      }
 
-			.nav-center a {
-				color: white;
-				text-decoration: none;
-				transition: opacity 0.3s;
-			}
+      .logo {
+        font-size: 1.8rem;
+        font-weight: bold;
+      }
 
-			.nav-center a:hover {
-				opacity: 0.8;
-			}
+      .nav-center {
+        display: flex;
+        list-style: none;
+        gap: 2rem;
+      }
 
-			.language-selector {
-				display: flex;
-				align-items: center;
-				gap: 0.5rem;
-			}
+      .nav-center a {
+        color: white;
+        text-decoration: none;
+        transition: opacity 0.3s;
+      }
 
-			.language-selector a {
-				color: white;
-				text-decoration: none;
-				padding: 0.5rem 1rem;
-				border-radius: 5px;
-				transition: background 0.3s;
-				font-weight: bold;
-			}
+      .nav-center a:hover {
+        opacity: 0.8;
+      }
 
-			.language-selector a:hover {
-				background: rgba(255, 255, 255, 0.2);
-			}
+      .language-selector {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
 
-			.language-selector .active {
-				background: rgba(255, 255, 255, 0.3);
-			}
+      .language-selector a {
+        color: white;
+        text-decoration: none;
+        padding: 0.5rem 1rem;
+        border-radius: 5px;
+        transition: background 0.3s;
+        font-weight: bold;
+      }
 
-			.hero {
-				background: linear-gradient(rgba(44, 85, 48, 0.8), rgba(74, 124, 89, 0.8)), url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><rect fill="%234a7c59" width="1200" height="600"/></svg>');
-				background-size: cover;
-				background-position: center;
-				color: white;
-				text-align: center;
-				padding: 6rem 2rem;
-			}
+      .language-selector a:hover {
+        background: rgba(255, 255, 255, 0.2);
+      }
 
-			.hero h1 {
-				font-size: 3.5rem;
-				margin-bottom: 1rem;
-				text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-			}
+      .language-selector .active {
+        background: rgba(255, 255, 255, 0.3);
+      }
 
-			.hero .subtitle {
-				font-size: 1.3rem;
-				margin-bottom: 2rem;
-				opacity: 0.95;
-			}
+      .hero {
+        background: linear-gradient(
+            rgba(44, 85, 48, 0.8),
+            rgba(74, 124, 89, 0.8)
+          ),
+          url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><rect fill="%234a7c59" width="1200" height="600"/></svg>');
+        background-size: cover;
+        background-position: center;
+        color: white;
+        text-align: center;
+        padding: 6rem 2rem;
+      }
 
-			.cta-button {
-				display: inline-block;
-				background: #ff6b35;
-				color: white;
-				padding: 1rem 2rem;
-				text-decoration: none;
-				border-radius: 5px;
-				font-weight: bold;
-				transition: background 0.3s;
-				margin-top: 1rem;
-			}
+      .hero h1 {
+        font-size: 3.5rem;
+        margin-bottom: 1rem;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+      }
 
-			.cta-button:hover {
-				background: #e55a2b;
-			}
+      .hero .subtitle {
+        font-size: 1.3rem;
+        margin-bottom: 2rem;
+        opacity: 0.95;
+      }
 
-			.container {
-				max-width: 1200px;
-				margin: 0 auto;
-				padding: 0 2rem;
-			}
+      .cta-button {
+        display: inline-block;
+        background: #ff6b35;
+        color: white;
+        padding: 1rem 2rem;
+        text-decoration: none;
+        border-radius: 5px;
+        font-weight: bold;
+        transition: background 0.3s;
+        margin-top: 1rem;
+      }
 
-			.section {
-				padding: 4rem 0;
-			}
+      .cta-button:hover {
+        background: #e55a2b;
+      }
 
-			.section h2 {
-				text-align: center;
-				font-size: 2.5rem;
-				margin-bottom: 3rem;
-				color: #2c5530;
-			}
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 2rem;
+      }
 
-			.services {
-				display: grid;
-				grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-				gap: 2rem;
-				margin-top: 2rem;
-			}
+      .section {
+        padding: 4rem 0;
+      }
 
-			.service-card {
-				background: white;
-				padding: 2rem;
-				border-radius: 10px;
-				box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-				text-align: center;
-				transition: transform 0.3s;
-			}
+      .section h2 {
+        text-align: center;
+        font-size: 2.5rem;
+        margin-bottom: 3rem;
+        color: #2c5530;
+      }
 
-			.service-card:hover {
-				transform: translateY(-5px);
-			}
+      .services {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+        margin-top: 2rem;
+      }
 
-			.service-card .icon {
-				font-size: 3rem;
-				margin-bottom: 1rem;
-			}
+      .service-card {
+        background: white;
+        padding: 2rem;
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        transition: transform 0.3s;
+      }
 
-			.service-card h3 {
-				color: #2c5530;
-				margin-bottom: 1rem;
-			}
+      .service-card:hover {
+        transform: translateY(-5px);
+      }
 
-			.about {
-				background: white;
-			}
+      .service-card .icon {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+      }
 
-			.about-content {
-				display: grid;
-				grid-template-columns: 1fr 1fr;
-				gap: 3rem;
-				align-items: center;
-			}
+      .service-card h3 {
+        color: #2c5530;
+        margin-bottom: 1rem;
+      }
 
-			.about-text {
-				font-size: 1.1rem;
-			}
+      .about {
+        background: white;
+      }
 
-			.about-image {
-				background: #e9ecef;
-				height: 300px;
-				border-radius: 10px;
-				display: flex;
-				align-items: center;
-				justify-content: center;
-				color: #6c757d;
-			}
+      .about-content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 3rem;
+        align-items: center;
+      }
 
-			.contact-info {
-				background: #2c5530;
-				color: white;
-				text-align: center;
-			}
+      .about-text {
+        font-size: 1.1rem;
+      }
 
-			.contact-grid {
-				display: grid;
-				grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-				gap: 2rem;
-			}
+      .about-image {
+        background: #e9ecef;
+        height: 300px;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #6c757d;
+      }
 
-			.contact-item {
-				padding: 1.5rem;
-			}
+      .contact-info {
+        background: #2c5530;
+        color: white;
+        text-align: center;
+      }
 
-			.contact-item .icon {
-				font-size: 2rem;
-				margin-bottom: 1rem;
-			}
+      .contact-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 2rem;
+      }
 
-			footer {
-				background: #1a1a1a;
-				color: white;
-				text-align: center;
-				padding: 2rem 0;
-			}
+      .contact-item {
+        padding: 1.5rem;
+      }
 
-			@media (max-width: 768px) {
-				.hero h1 {
-					font-size: 2.5rem;
-				}
-				
-				.nav-center {
-					gap: 1rem;
-				}
-				
-				.about-content {
-					grid-template-columns: 1fr;
-				}
+      .contact-item .icon {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+      }
 
-				nav {
-					flex-direction: column;
-					gap: 1rem;
-				}
-			}
-		</style>
-	</head>
-	<body>
-		<header>
-			<nav>
-				<div class="logo">Woori Acupuntura</div>
-				<ul class="nav-center">
-					<li><a href="#home">Inicio</a></li>
-					<li><a href="#services">Servicios</a></li>
-					<li><a href="#about">Acerca</a></li>
-					<li><a href="#contact">Contacto</a></li>
-				</ul>
-				<div class="language-selector">
-					<a href="/">EN</a>
-					<a href="/es/" class="active">ES</a>
-				</div>
-			</nav>
-		</header>
+      footer {
+        background: #1a1a1a;
+        color: white;
+        text-align: center;
+        padding: 2rem 0;
+      }
 
-		<section class="hero" id="home">
-			<h1>Woori Acupuntura</h1>
-			<p class="subtitle">Restaure su Salud con Medicina Tradicional Coreana y Acupuntura Moderna</p>
-			<a href="#contact" class="cta-button">Programar Cita</a>
-		</section>
+      @media (max-width: 768px) {
+        .hero h1 {
+          font-size: 2.5rem;
+        }
 
-		<section class="section" id="services">
-			<div class="container">
-				<h2>Nuestros Servicios</h2>
-				<div class="services">
-					<div class="service-card">
-						<div class="icon">🪡</div>
-						<h3>Acupuntura</h3>
-						<p>Acupuntura tradicional para alivio del dolor y mejora de la salud general mediante la colocación precisa de agujas en puntos específicos.</p>
-					</div>
-					<div class="service-card">
-						<div class="icon">🌿</div>
-						<h3>Medicina Herbal</h3>
-						<p>Prescripciones herbales personalizadas utilizando principios de medicina tradicional coreana para tratamiento integral.</p>
-					</div>
-				</div>
-			</div>
-		</section>
+        .nav-center {
+          gap: 1rem;
+        }
 
-		<section class="section about" id="about">
-			<div class="container">
-				<h2>Acerca de Nosotros</h2>
-				<div class="about-content">
-					<div class="about-text">
-						<p>Combinamos la medicina tradicional coreana con técnicas terapéuticas modernas para brindar la mejor atención a nuestros pacientes. Con años de experiencia, ofrecemos tratamientos personalizados adaptados a la condición individual de cada paciente para una recuperación fundamental de la salud.</p>
-						<p>Nuestro enfoque se centra en tratar la causa raíz de los problemas de salud en lugar de solo los síntomas, promoviendo el bienestar a largo plazo y los procesos naturales de curación.</p>
-					</div>
-					<div class="about-image">
-						<p>Foto del Interior de la Clínica</p>
-					</div>
-				</div>
-			</div>
-		</section>
+        .about-content {
+          grid-template-columns: 1fr;
+        }
 
-		<section class="section contact-info" id="contact">
-			<div class="container">
-				<h2 style="color: white;">Información de Contacto</h2>
-				<div class="contact-grid">
-					<div class="contact-item">
-						<div class="icon">📍</div>
-						<h3>Ubicación</h3>
-						<p>
-						3579 Arlington Ave Suite 900<br />
-						Riverside, California 92506<br />
-						GPS: 33.9466568, -117.3915209
-						</p>
-					</div>
-					<div class="contact-item">
-						<div class="icon">📞</div>
-						<h3>Teléfono</h3>
-						<p>
-						Oficina: (951) 777-1011<br />
-						Móvil: (714) 261-0605<br />
-						</p>
-					</div>
-					<div class="contact-item">
-						<div class="icon">🕐</div>
-						<h3>Horarios</h3>
-						<p>Lunes-Viernes: 9:00 AM - 6:00 PM<br>
-						Sábado: 9:00 AM - 3:00 PM<br>
-						Domingo: Cerrado</p>
-					</div>
-				</div>
-			</div>
-		</section>
+        nav {
+          flex-direction: column;
+          gap: 1rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="logo">Woori Acupuntura</div>
+        <ul class="nav-center">
+          <li><a href="#home">Inicio</a></li>
+          <li><a href="#services">Servicios</a></li>
+          <li><a href="#about">Acerca</a></li>
+          <li><a href="#contact">Contacto</a></li>
+        </ul>
+        <div class="language-selector">
+          <a href="/">EN</a>
+          <a href="/es/" class="active">ES</a>
+        </div>
+      </nav>
+    </header>
 
-		<footer>
-			<div class="container">
-				<p>&copy; 2025 Woori Acupuntura. Todos los derechos reservados.</p>
-			</div>
-		</footer>
-	</body>
+    <section class="hero" id="home">
+      <h1>Woori Acupuntura</h1>
+      <p class="subtitle">
+        Restaure su Salud con Medicina Tradicional Coreana y Acupuntura Moderna
+      </p>
+      <a href="#contact" class="cta-button">Programar Cita</a>
+    </section>
+
+    <section class="section" id="services">
+      <div class="container">
+        <h2>Nuestros Servicios</h2>
+        <div class="services">
+          <div class="service-card">
+            <div class="icon">🪡</div>
+            <h3>Acupuntura</h3>
+            <p>
+              Acupuntura tradicional para alivio del dolor y mejora de la salud
+              general mediante la colocación precisa de agujas en puntos
+              específicos.
+            </p>
+          </div>
+          <div class="service-card">
+            <div class="icon">🌿</div>
+            <h3>Medicina Herbal</h3>
+            <p>
+              Prescripciones herbales personalizadas utilizando principios de
+              medicina tradicional coreana para tratamiento integral.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section about" id="about">
+      <div class="container">
+        <h2>Acerca de Nosotros</h2>
+        <div class="about-content">
+          <div class="about-text">
+            <p>
+              Combinamos la medicina tradicional coreana con técnicas
+              terapéuticas modernas para brindar la mejor atención a nuestros
+              pacientes. Con años de experiencia, ofrecemos tratamientos
+              personalizados adaptados a la condición individual de cada
+              paciente para una recuperación fundamental de la salud.
+            </p>
+            <p>
+              Nuestro enfoque se centra en tratar la causa raíz de los problemas
+              de salud en lugar de solo los síntomas, promoviendo el bienestar a
+              largo plazo y los procesos naturales de curación.
+            </p>
+          </div>
+          <div class="about-image">
+            <p>Foto del Interior de la Clínica</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section contact-info" id="contact">
+      <div class="container">
+        <h2 style="color: white;">Información de Contacto</h2>
+        <div class="contact-grid">
+          <div class="contact-item">
+            <div class="icon">📍</div>
+            <h3>Ubicación</h3>
+            <p>
+              3579 Arlington Ave Suite 900<br />
+              Riverside, California 92506
+            </p>
+          </div>
+          <div class="contact-item">
+            <div class="icon">📞</div>
+            <h3>Teléfono</h3>
+            <p>
+              Oficina: (951) 777-1011<br />
+              Móvil: (714) 261-0605<br />
+            </p>
+          </div>
+          <div class="contact-item">
+            <div class="icon">🕐</div>
+            <h3>Horarios</h3>
+            <p>
+              Lunes-Viernes: 9:00 AM - 6:00 PM<br />
+              Sábado: 9:00 AM - 3:00 PM<br />
+              Domingo: Cerrado
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container">
+        <p>&copy; 2025 Woori Acupuntura. Todos los derechos reservados.</p>
+      </div>
+    </footer>
+  </body>
 </html>
