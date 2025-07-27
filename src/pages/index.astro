@@ -3,71 +3,368 @@
 ---
 
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>My Astro Website</title>
-		<style>
-			body {
-				font-family: system-ui, sans-serif;
-				margin: 0;
-				padding: 2rem;
-				background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-				min-height: 100vh;
-				color: white;
-			}
-			.container {
-				max-width: 1200px;
-				margin: 0 auto;
-				text-align: center;
-			}
-			h1 {
-				font-size: 3rem;
-				margin-bottom: 1rem;
-			}
-			.subtitle {
-				font-size: 1.2rem;
-				opacity: 0.9;
-				margin-bottom: 2rem;
-			}
-			.features {
-				display: grid;
-				grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-				gap: 2rem;
-				margin-top: 3rem;
-			}
-			.feature {
-				background: rgba(255, 255, 255, 0.1);
-				padding: 1.5rem;
-				border-radius: 8px;
-				backdrop-filter: blur(10px);
-			}
-			.feature h3 {
-				margin-top: 0;
-			}
-		</style>
-	</head>
-	<body>
-		<div class="container">
-			<h1>Welcome to My Astro Website</h1>
-			<p class="subtitle">Built with modern web technologies for optimal performance</p>
-			
-			<div class="features">
-				<div class="feature">
-					<h3>⚡ Fast</h3>
-					<p>Astro delivers lightning-fast performance with minimal JavaScript</p>
-				</div>
-				<div class="feature">
-					<h3>🎨 Flexible</h3>
-					<p>Use your favorite UI framework or vanilla HTML/CSS</p>
-				</div>
-				<div class="feature">
-					<h3>🚀 Modern</h3>
-					<p>Built with the latest web standards and best practices</p>
-				</div>
-			</div>
-		</div>
-	</body>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Woori Acupuncture Clinic - Traditional Korean Medicine</title>
+    <meta
+      name="description"
+      content="Professional acupuncture and traditional Korean medicine services in California. Restore your health with experienced practitioners."
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        line-height: 1.6;
+        color: #333;
+        background-color: #f8f9fa;
+      }
+
+      header {
+        background: linear-gradient(135deg, #2c5530 0%, #4a7c59 100%);
+        color: white;
+        padding: 1rem 0;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      nav {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 2rem;
+      }
+
+      .logo {
+        font-size: 1.8rem;
+        font-weight: bold;
+      }
+
+      .nav-center {
+        display: flex;
+        list-style: none;
+        gap: 2rem;
+      }
+
+      .nav-center a {
+        color: white;
+        text-decoration: none;
+        transition: opacity 0.3s;
+      }
+
+      .nav-center a:hover {
+        opacity: 0.8;
+      }
+
+      .language-selector {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+
+      .language-selector a {
+        color: white;
+        text-decoration: none;
+        padding: 0.5rem 1rem;
+        border-radius: 5px;
+        transition: background 0.3s;
+        font-weight: bold;
+      }
+
+      .language-selector a:hover {
+        background: rgba(255, 255, 255, 0.2);
+      }
+
+      .language-selector .active {
+        background: rgba(255, 255, 255, 0.3);
+      }
+
+      .hero {
+        background: linear-gradient(
+            rgba(44, 85, 48, 0.8),
+            rgba(74, 124, 89, 0.8)
+          ),
+          url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><rect fill="%234a7c59" width="1200" height="600"/></svg>');
+        background-size: cover;
+        background-position: center;
+        color: white;
+        text-align: center;
+        padding: 6rem 2rem;
+      }
+
+      .hero h1 {
+        font-size: 3.5rem;
+        margin-bottom: 1rem;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+      }
+
+      .hero .subtitle {
+        font-size: 1.3rem;
+        margin-bottom: 2rem;
+        opacity: 0.95;
+      }
+
+      .cta-button {
+        display: inline-block;
+        background: #ff6b35;
+        color: white;
+        padding: 1rem 2rem;
+        text-decoration: none;
+        border-radius: 5px;
+        font-weight: bold;
+        transition: background 0.3s;
+        margin-top: 1rem;
+      }
+
+      .cta-button:hover {
+        background: #e55a2b;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 2rem;
+      }
+
+      .section {
+        padding: 4rem 0;
+      }
+
+      .section h2 {
+        text-align: center;
+        font-size: 2.5rem;
+        margin-bottom: 3rem;
+        color: #2c5530;
+      }
+
+      .services {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+        margin-top: 2rem;
+      }
+
+      .service-card {
+        background: white;
+        padding: 2rem;
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        transition: transform 0.3s;
+      }
+
+      .service-card:hover {
+        transform: translateY(-5px);
+      }
+
+      .service-card .icon {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+      }
+
+      .service-card h3 {
+        color: #2c5530;
+        margin-bottom: 1rem;
+      }
+
+      .about {
+        background: white;
+      }
+
+      .about-content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 3rem;
+        align-items: center;
+      }
+
+      .about-text {
+        font-size: 1.1rem;
+      }
+
+      .about-image {
+        background: #e9ecef;
+        height: 300px;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #6c757d;
+      }
+
+      .contact-info {
+        background: #2c5530;
+        color: white;
+        text-align: center;
+      }
+
+      .contact-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 2rem;
+      }
+
+      .contact-item {
+        padding: 1.5rem;
+      }
+
+      .contact-item .icon {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+      }
+
+      footer {
+        background: #1a1a1a;
+        color: white;
+        text-align: center;
+        padding: 2rem 0;
+      }
+
+      @media (max-width: 768px) {
+        .hero h1 {
+          font-size: 2.5rem;
+        }
+
+        .nav-center {
+          gap: 1rem;
+        }
+
+        .about-content {
+          grid-template-columns: 1fr;
+        }
+
+        nav {
+          flex-direction: column;
+          gap: 1rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="logo">Woori Acupuncture</div>
+        <ul class="nav-center">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="language-selector">
+          <a href="/" class="active">EN</a>
+          <a href="/es/">ES</a>
+        </div>
+      </nav>
+    </header>
+
+    <section class="hero" id="home">
+      <h1>Woori Acupuncture</h1>
+      <p class="subtitle">
+        Restore Your Health with Traditional Korean Medicine & Modern
+        Acupuncture
+      </p>
+      <a href="#contact" class="cta-button">Schedule Appointment</a>
+    </section>
+
+    <section class="section" id="services">
+      <div class="container">
+        <h2>Our Services</h2>
+        <div class="services">
+          <div class="service-card">
+            <div class="icon">🪡</div>
+            <h3>Acupuncture</h3>
+            <p>
+              Traditional acupuncture for pain relief and overall health
+              improvement through precise needle placement at specific
+              acupoints.
+            </p>
+          </div>
+          <div class="service-card">
+            <div class="icon">🌿</div>
+            <h3>Herbal Medicine</h3>
+            <p>
+              Personalized herbal prescriptions using traditional Korean
+              medicine principles for comprehensive treatment.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section about" id="about">
+      <div class="container">
+        <h2>About Us</h2>
+        <div class="about-content">
+          <div class="about-text">
+            <p>
+              We combine traditional Korean medicine with modern therapeutic
+              techniques to provide the best care for our patients. With years
+              of experience, we offer personalized treatments tailored to each
+              patient's individual condition for fundamental health recovery.
+            </p>
+            <p>
+              Our approach focuses on treating the root cause of health issues
+              rather than just symptoms, promoting long-term wellness and
+              natural healing processes.
+            </p>
+          </div>
+          <div class="about-image">
+            <p>Clinic Interior Photo</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section contact-info" id="contact">
+      <div class="container">
+        <h2 style="color: white;">Contact Information</h2>
+        <div class="contact-grid">
+          <div class="contact-item">
+            <div class="icon">📍</div>
+            <h3>Location</h3>
+            <p>
+              3579 Arlington Ave Suite 900<br />
+              Riverside, California 92506<br />
+              GPS: 33.9466568, -117.3915209
+            </p>
+          </div>
+          <div class="contact-item">
+            <div class="icon">📞</div>
+            <h3>Phone</h3>
+            <p>
+              Office: (951) 777-1011<br />
+              Mobile: (714) 261-0605<br />
+            </p>
+          </div>
+          <div class="contact-item">
+            <div class="icon">🕐</div>
+            <h3>Hours</h3>
+            <p>
+              Monday-Friday: 9:00 AM - 6:00 PM<br />
+              Saturday: 9:00 AM - 3:00 PM<br />
+              Sunday: Closed
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container">
+        <p>&copy; 2025 Woori Acupuncture. All rights reserved.</p>
+      </div>
+    </footer>
+  </body>
 </html>
