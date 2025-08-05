@@ -1,5 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import Map from "../components/Map.astro";
 ---
 
 <Layout
@@ -138,6 +139,10 @@ import Layout from "../layouts/Layout.astro";
             Sunday: Closed
           </div>
         </article>
+      </div>
+
+      <div class="map-section">
+        <Map lat={33.9466568} lng={-117.3915209} zoom={15} height="500px" />
       </div>
     </div>
   </section>

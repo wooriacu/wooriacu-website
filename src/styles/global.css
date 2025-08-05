@@ -229,6 +229,11 @@ a[href^="tel:"]:hover {
   margin-bottom: 1rem;
 }
 
+/* Map Section */
+.map-section {
+  margin-top: 3rem;
+}
+
 /* Footer */
 footer {
   background: #1a1a1a;
