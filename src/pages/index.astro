@@ -1,5 +1,5 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout
@@ -13,142 +13,138 @@ import Layout from '../layouts/Layout.astro';
   hreflangEs="https://wooriacu.com/es/"
   keywords="acupuncture, Korean medicine, herbal medicine, pain relief, traditional medicine, Riverside CA, natural healing, wellness, holistic health"
 >
-    <header>
-      <nav>
-        <div class="logo">Woori Acupuncture</div>
-        <ul class="nav-center">
-          <li><a href="#home">Home</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-        <div class="language-selector">
-          <a href="/" class="active">English</a>
-          <a href="/es/">Español</a>
+  <header>
+    <nav>
+      <div class="logo">Woori Acupuncture</div>
+      <ul class="nav-center">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="language-selector">
+        <a href="/" class="active">English</a>
+        <a href="/es/">Español</a>
+      </div>
+    </nav>
+  </header>
+
+  <section class="hero" id="home">
+    <h1>Woori Acupuncture</h1>
+    <p class="subtitle">
+      Restore Your Health with Traditional Korean Medicine & Modern Acupuncture
+    </p>
+    <a href="#contact" class="cta-button">Schedule Appointment</a>
+  </section>
+
+  <section class="section" id="services" aria-labelledby="services-heading">
+    <div class="container">
+      <h2 id="services-heading">Our Professional Services</h2>
+      <div class="services">
+        <article class="service-card">
+          <div class="icon" aria-hidden="true">⚕️</div>
+          <h3>Traditional Acupuncture Therapy</h3>
+          <p>
+            Experience authentic traditional acupuncture for effective pain
+            relief and overall health improvement through precise needle
+            placement at specific therapeutic acupoints. Our licensed
+            practitioners use sterile, single-use needles for safe and effective
+            treatment.
+          </p>
+        </article>
+        <article class="service-card">
+          <div class="icon" aria-hidden="true">🌿</div>
+          <h3>Korean Herbal Medicine</h3>
+          <p>
+            Receive personalized herbal prescriptions using time-tested
+            traditional Korean medicine principles for comprehensive treatment.
+            Our custom herbal formulas target the root cause of health issues
+            for lasting wellness.
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section about" id="about" aria-labelledby="about-heading">
+    <div class="container">
+      <h2 id="about-heading">
+        About Woori Acupuncture - Your Trusted Korean Medicine Clinic
+      </h2>
+      <div class="about-content">
+        <div class="about-text">
+          <p>
+            <strong>Woori Acupuncture</strong> combines authentic traditional Korean
+            medicine with modern therapeutic techniques to provide the highest quality
+            care for our patients in Riverside, California. With years of experience
+            and specialized training, we offer personalized treatments tailored to
+            each patient's individual condition for fundamental health recovery and
+            long-term wellness.
+          </p>
+          <p>
+            Our holistic approach focuses on treating the root cause of health
+            issues rather than just managing symptoms, promoting natural healing
+            processes and sustainable wellness. We are committed to helping you
+            achieve optimal health through time-tested traditional methods.
+          </p>
         </div>
-      </nav>
-    </header>
-
-    <section class="hero" id="home">
-      <h1>Woori Acupuncture</h1>
-      <p class="subtitle">
-        Restore Your Health with Traditional Korean Medicine & Modern
-        Acupuncture
-      </p>
-      <a href="#contact" class="cta-button">Schedule Appointment</a>
-    </section>
-
-    <section class="section" id="services" aria-labelledby="services-heading">
-      <div class="container">
-        <h2 id="services-heading">Our Professional Services</h2>
-        <div class="services">
-          <article class="service-card">
-            <div class="icon" aria-hidden="true">🪡</div>
-            <h3>Traditional Acupuncture Therapy</h3>
-            <p>
-              Experience authentic traditional acupuncture for effective pain
-              relief and overall health improvement through precise needle
-              placement at specific therapeutic acupoints. Our licensed
-              practitioners use sterile, single-use needles for safe and
-              effective treatment.
-            </p>
-          </article>
-          <article class="service-card">
-            <div class="icon" aria-hidden="true">🌿</div>
-            <h3>Korean Herbal Medicine</h3>
-            <p>
-              Receive personalized herbal prescriptions using time-tested
-              traditional Korean medicine principles for comprehensive
-              treatment. Our custom herbal formulas target the root cause of
-              health issues for lasting wellness.
-            </p>
-          </article>
+        <div class="about-image">
+          <img
+            src="/woori-acu-clinic-1.jpg"
+            alt="Professional acupuncture treatment room at Woori Acupuncture clinic in Riverside, California"
+            loading="lazy"
+            width="400"
+            height="300"
+          />
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section class="section about" id="about" aria-labelledby="about-heading">
-      <div class="container">
-        <h2 id="about-heading">
-          About Woori Acupuncture - Your Trusted Korean Medicine Clinic
-        </h2>
-        <div class="about-content">
-          <div class="about-text">
-            <p>
-              <strong>Woori Acupuncture</strong> combines authentic traditional Korean
-              medicine with modern therapeutic techniques to provide the highest
-              quality care for our patients in Riverside, California. With years
-              of experience and specialized training, we offer personalized treatments
-              tailored to each patient's individual condition for fundamental health
-              recovery and long-term wellness.
-            </p>
-            <p>
-              Our holistic approach focuses on treating the root cause of health
-              issues rather than just managing symptoms, promoting natural
-              healing processes and sustainable wellness. We are committed to
-              helping you achieve optimal health through time-tested traditional
-              methods.
-            </p>
+  <section
+    class="section contact-info"
+    id="contact"
+    aria-labelledby="contact-heading"
+  >
+    <div class="container">
+      <h2 id="contact-heading" style="color: white;">
+        Contact Woori Acupuncture - Schedule Your Appointment
+      </h2>
+      <div class="contact-grid">
+        <article class="contact-item">
+          <div class="icon" aria-hidden="true">📍</div>
+          <h3>Clinic Location</h3>
+          <address>
+            3579 Arlington Ave Suite 900<br />
+            Riverside, California 92506
+          </address>
+        </article>
+        <article class="contact-item">
+          <div class="icon" aria-hidden="true">📞</div>
+          <h3>Phone Numbers</h3>
+          <p>
+            Office: <a href="tel:+19517771011" rel="nofollow">(951) 777-1011</a
+            ><br />
+            Mobile: <a href="tel:+17142610605" rel="nofollow">(714) 261-0605</a
+            ><br />
+          </p>
+        </article>
+        <article class="contact-item">
+          <div class="icon" aria-hidden="true">🕐</div>
+          <h3>Business Hours</h3>
+          <div>
+            Monday-Friday: 9:00 AM - 6:00 PM<br />
+            Saturday: 9:00 AM - 3:00 PM<br />
+            Sunday: Closed
           </div>
-          <div class="about-image">
-            <img
-              src="/woori-acu-clinic-1.jpg"
-              alt="Professional acupuncture treatment room at Woori Acupuncture clinic in Riverside, California"
-              loading="lazy"
-              width="400"
-              height="300"
-            />
-          </div>
-        </div>
+        </article>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section
-      class="section contact-info"
-      id="contact"
-      aria-labelledby="contact-heading"
-    >
-      <div class="container">
-        <h2 id="contact-heading" style="color: white;">
-          Contact Woori Acupuncture - Schedule Your Appointment
-        </h2>
-        <div class="contact-grid">
-          <article class="contact-item">
-            <div class="icon" aria-hidden="true">📍</div>
-            <h3>Clinic Location</h3>
-            <address>
-              3579 Arlington Ave Suite 900<br />
-              Riverside, California 92506
-            </address>
-          </article>
-          <article class="contact-item">
-            <div class="icon" aria-hidden="true">📞</div>
-            <h3>Phone Numbers</h3>
-            <p>
-              Office: <a href="tel:+19517771011" rel="nofollow"
-                >(951) 777-1011</a
-              ><br />
-              Mobile: <a href="tel:+17142610605" rel="nofollow"
-                >(714) 261-0605</a
-              ><br />
-            </p>
-          </article>
-          <article class="contact-item">
-            <div class="icon" aria-hidden="true">🕐</div>
-            <h3>Business Hours</h3>
-            <div>
-              Monday-Friday: 9:00 AM - 6:00 PM<br />
-              Saturday: 9:00 AM - 3:00 PM<br />
-              Sunday: Closed
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <footer>
-      <div class="container">
-        <p>&copy; 2025 Woori Acupuncture. All rights reserved.</p>
-      </div>
-    </footer>
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Woori Acupuncture. All rights reserved.</p>
+    </div>
+  </footer>
 </Layout>
