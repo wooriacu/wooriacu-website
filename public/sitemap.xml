@@ -1,19 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" 
+        xmlns:xhtml="http://www.w3.org/1999/xhtml"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  
+  <!-- Main English Homepage -->
   <url>
     <loc>https://wooriacu.com/</loc>
-    <lastmod>2025-01-27</lastmod>
-    <changefreq>monthly</changefreq>
+    <lastmod>2025-08-06</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://wooriacu.com/" />
     <xhtml:link rel="alternate" hreflang="es" href="https://wooriacu.com/es/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wooriacu.com/" />
+    <!-- Include clinic image for better SEO -->
+    <image:image>
+      <image:loc>https://wooriacu.com/woori-acu-clinic-1.jpg</image:loc>
+      <image:caption>Professional acupuncture treatment room at Woori Acupuncture clinic in Riverside, California</image:caption>
+      <image:title>Woori Acupuncture Clinic Interior</image:title>
+    </image:image>
   </url>
+  
+  <!-- Spanish Homepage -->
   <url>
     <loc>https://wooriacu.com/es/</loc>
-    <lastmod>2025-01-27</lastmod>
-    <changefreq>monthly</changefreq>
+    <lastmod>2025-08-06</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://wooriacu.com/" />
     <xhtml:link rel="alternate" hreflang="es" href="https://wooriacu.com/es/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wooriacu.com/" />
+    <!-- Include clinic image for Spanish version -->
+    <image:image>
+      <image:loc>https://wooriacu.com/woori-acu-clinic-1.jpg</image:loc>
+      <image:caption>Sala de tratamiento profesional de acupuntura en la clínica Woori Acupuntura en Riverside, California</image:caption>
+      <image:title>Interior de la Clínica Woori Acupuntura</image:title>
+    </image:image>
   </url>
+  
 </urlset>

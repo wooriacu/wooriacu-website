@@ -1,12 +1,51 @@
+# Robots.txt for Woori Acupuncture
+# https://wooriacu.com
+
 User-agent: *
 Allow: /
+
+# Explicitly allow important pages for SEO
+Allow: /es/
+Allow: /*.jpg
+Allow: /*.jpeg
+Allow: /*.png
+Allow: /*.webp
+Allow: /*.css
+Allow: /*.js
+
+# Disallow temporary or development files
+Disallow: /tmp/
+Disallow: /*.tmp
+Disallow: /node_modules/
+Disallow: /src/
+Disallow: /.git/
+Disallow: /dist/
+Disallow: /*.log
 
 # Sitemaps
 Sitemap: https://wooriacu.com/sitemap.xml
 
-# Allow all bots to access the site
+# Allow all major search engines with appropriate crawl delay
+User-agent: Googlebot
 Crawl-delay: 1
 
-# Disallow admin or private areas (if any)
-# Disallow: /admin/
-# Disallow: /private/
+User-agent: Bingbot
+Crawl-delay: 1
+
+User-agent: Slurp
+Crawl-delay: 1
+
+User-agent: DuckDuckBot
+Crawl-delay: 1
+
+User-agent: Baiduspider
+Crawl-delay: 2
+
+User-agent: YandexBot
+Crawl-delay: 2
+
+# General crawl delay for other bots
+Crawl-delay: 1
+
+# Healthcare and medical content - encourage thorough indexing
+# This helps search engines understand the medical nature of the content
