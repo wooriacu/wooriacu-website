@@ -1,13 +1,14 @@
 ---
+import { getRelativeLocaleUrl } from "astro:i18n"
 import type { Locale } from "../utils/i18n"
-import { t, getTranslations } from "../utils/i18n"
+import { t } from "../utils/i18n"
 
 interface Props {
   locale: Locale
 }
 
 const { locale } = Astro.props
-const translations = getTranslations(locale)
+const homeUrl = getRelativeLocaleUrl(locale, "/")
 ---
 
 <section class="section" id="services" aria-labelledby="services-heading">
@@ -34,86 +35,121 @@ const translations = getTranslations(locale)
     </h3>
 
     <div class="services">
-      {
-        translations.conditions.list.map((condition: any) => (
-          <article class="service-card">
-            <div class="icon" aria-hidden="true">
-              {condition.title === "Menstrual Cramps" ||
-              condition.title === "Cólicos Menstruales"
-                ? "🌙"
-                : condition.title === "Acne Treatment" ||
-                    condition.title === "Tratamiento del Acné"
-                  ? "🌟"
-                  : condition.title === "Holistic Mind & Body Healing" ||
-                      condition.title === "Sanación Holística de Mente y Cuerpo"
-                    ? "☯️"
-                    : condition.title === "Anxiety" ||
-                        condition.title === "Ansiedad"
-                      ? "🕊️"
-                      : condition.title === "Pain Management" ||
-                          condition.title === "Manejo del Dolor"
-                        ? "⚡"
-                        : condition.title.includes("Arthritis") ||
-                            condition.title.includes("Artritis")
-                          ? "🦵"
-                          : condition.title.includes("Parkinson")
-                            ? "🤝"
-                            : condition.title.includes("Menopause") ||
-                                condition.title.includes("Menopausia")
-                              ? "🌺"
-                              : condition.title === "Infertility" ||
-                                  condition.title === "Infertilidad"
-                                ? "🤱"
-                                : condition.title.includes("Prostatic") ||
-                                    condition.title.includes("Prostático")
-                                  ? "👨"
-                                  : condition.title.includes("Digestive") ||
-                                      condition.title.includes("Digestivo")
-                                    ? "🥗"
-                                    : condition.title.includes("Crohn")
-                                      ? "🔬"
-                                      : condition.title.includes("Stroke") ||
-                                          condition.title.includes(
-                                            "Cerebrovascular"
-                                          )
-                                        ? "🧬"
-                                        : condition.title.includes("Bell")
-                                          ? "😶"
-                                          : condition.title === "Diabetes"
-                                            ? "🍯"
-                                            : condition.title.includes(
-                                                  "Blood Pressure"
-                                                ) ||
-                                                condition.title.includes(
-                                                  "Presión Arterial"
-                                                )
-                                              ? "❤️"
-                                              : condition.title.includes(
-                                                    "Weight"
-                                                  ) ||
-                                                  condition.title.includes(
-                                                    "Peso"
-                                                  )
-                                                ? "🏃"
-                                                : condition.title.includes(
-                                                      "Skin"
-                                                    ) ||
-                                                    condition.title.includes(
-                                                      "Piel"
-                                                    )
-                                                  ? "🎭"
-                                                  : condition.title ===
-                                                        "Insomnia" ||
-                                                      condition.title ===
-                                                        "Insomnio"
-                                                    ? "😴"
-                                                    : "⚕️"}
-            </div>
-            <h3>{condition.title}</h3>
-            <p>{condition.description}</p>
-          </article>
-        ))
-      }
+      <article class="service-card">
+        <div class="icon" aria-hidden="true">🌙</div>
+        <h3>{t(locale, "conditions.menstrualCramps.title")}</h3>
+        <p>{t(locale, "conditions.menstrualCramps.description")}</p>
+      </article>
+
+      <article class="service-card">
+        <div class="icon" aria-hidden="true">🌟</div>
+        <h3>{t(locale, "conditions.acneTreatment.title")}</h3>
+        <p>{t(locale, "conditions.acneTreatment.description")}</p>
+      </article>
+
+      <article class="service-card">
+        <div class="icon" aria-hidden="true">☯️</div>
+        <h3>{t(locale, "conditions.holisticHealing.title")}</h3>
+        <p>{t(locale, "conditions.holisticHealing.description")}</p>
+      </article>
+
+      <article class="service-card">
+        <div class="icon" aria-hidden="true">🕊️</div>
+        <h3>{t(locale, "conditions.anxiety.title")}</h3>
+        <p>{t(locale, "conditions.anxiety.description")}</p>
+      </article>
+
+      <article class="service-card">
+        <div class="icon" aria-hidden="true">⚡</div>
+        <h3>{t(locale, "conditions.painManagement.title")}</h3>
+        <p>{t(locale, "conditions.painManagement.description")}</p>
+      </article>
+
+      <article class="service-card">
+        <div class="icon" aria-hidden="true">🦵</div>
+        <h3>{t(locale, "conditions.arthritis.title")}</h3>
+        <p>{t(locale, "conditions.arthritis.description")}</p>
+      </article>
+
+      <article class="service-card">
+        <div class="icon" aria-hidden="true">🤝</div>
+        <h3>{t(locale, "conditions.parkinsons.title")}</h3>
+        <p>{t(locale, "conditions.parkinsons.description")}</p>
+      </article>
+
+      <a href={getRelativeLocaleUrl(locale, "womans-menopause")}>
+        <article class="service-card">
+          <div class="icon" aria-hidden="true">🌺</div>
+          <h3>{t(locale, "conditions.menopause.title")}</h3>
+          <p>{t(locale, "conditions.menopause.description")}</p>
+        </article>
+      </a>
+
+      <article class="service-card">
+        <div class="icon" aria-hidden="true">🤱</div>
+        <h3>{t(locale, "conditions.infertility.title")}</h3>
+        <p>{t(locale, "conditions.infertility.description")}</p>
+      </article>
+
+      <article class="service-card">
+        <div class="icon" aria-hidden="true">👨</div>
+        <h3>{t(locale, "conditions.prostatic.title")}</h3>
+        <p>{t(locale, "conditions.prostatic.description")}</p>
+      </article>
+
+      <article class="service-card">
+        <div class="icon" aria-hidden="true">🥗</div>
+        <h3>{t(locale, "conditions.digestive.title")}</h3>
+        <p>{t(locale, "conditions.digestive.description")}</p>
+      </article>
+
+      <article class="service-card">
+        <div class="icon" aria-hidden="true">🔬</div>
+        <h3>{t(locale, "conditions.crohns.title")}</h3>
+        <p>{t(locale, "conditions.crohns.description")}</p>
+      </article>
+
+      <article class="service-card">
+        <div class="icon" aria-hidden="true">🧬</div>
+        <h3>{t(locale, "conditions.stroke.title")}</h3>
+        <p>{t(locale, "conditions.stroke.description")}</p>
+      </article>
+
+      <article class="service-card">
+        <div class="icon" aria-hidden="true">😶</div>
+        <h3>{t(locale, "conditions.bellsPalsy.title")}</h3>
+        <p>{t(locale, "conditions.bellsPalsy.description")}</p>
+      </article>
+
+      <article class="service-card">
+        <div class="icon" aria-hidden="true">🍯</div>
+        <h3>{t(locale, "conditions.diabetes.title")}</h3>
+        <p>{t(locale, "conditions.diabetes.description")}</p>
+      </article>
+
+      <article class="service-card">
+        <div class="icon" aria-hidden="true">❤️</div>
+        <h3>{t(locale, "conditions.highBloodPressure.title")}</h3>
+        <p>{t(locale, "conditions.highBloodPressure.description")}</p>
+      </article>
+
+      <article class="service-card">
+        <div class="icon" aria-hidden="true">🏃</div>
+        <h3>{t(locale, "conditions.weightManagement.title")}</h3>
+        <p>{t(locale, "conditions.weightManagement.description")}</p>
+      </article>
+
+      <article class="service-card">
+        <div class="icon" aria-hidden="true">🎭</div>
+        <h3>{t(locale, "conditions.skinIssues.title")}</h3>
+        <p>{t(locale, "conditions.skinIssues.description")}</p>
+      </article>
+
+      <article class="service-card">
+        <div class="icon" aria-hidden="true">😴</div>
+        <h3>{t(locale, "conditions.insomnia.title")}</h3>
+        <p>{t(locale, "conditions.insomnia.description")}</p>
+      </article>
     </div>
   </div>
 </section>

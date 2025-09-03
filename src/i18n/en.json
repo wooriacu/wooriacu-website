@@ -30,84 +30,82 @@
   },
   "conditions": {
     "title": "Conditions We Treat",
-    "list": [
-      {
-        "title": "Menstrual Cramps",
-        "description": "Targeted acupuncture treatment for menstrual pain relief and regulation of menstrual cycle disorders."
-      },
-      {
-        "title": "Acne Treatment",
-        "description": "Holistic approach to skin health using acupuncture and herbal medicine to address root causes of acne."
-      },
-      {
-        "title": "Holistic Mind & Body Healing",
-        "description": "Comprehensive treatment addressing both mental and physical wellness through traditional Korean medicine."
-      },
-      {
-        "title": "Anxiety",
-        "description": "Natural anxiety relief through acupuncture and herbal treatments to restore mental balance and calm."
-      },
-      {
-        "title": "Pain Management",
-        "description": "Effective pain relief for chronic and acute conditions using traditional acupuncture techniques."
-      },
-      {
-        "title": "Arthritis, Muscle & Joint Pain",
-        "description": "Specialized treatment for inflammatory conditions and musculoskeletal pain relief."
-      },
-      {
-        "title": "Parkinson's Disease",
-        "description": "Supportive care for Parkinson's symptoms using acupuncture to improve quality of life."
-      },
-      {
-        "title": "Women's Menopause",
-        "description": "Natural menopause symptom management through traditional Korean medicine approaches."
-      },
-      {
-        "title": "Infertility",
-        "description": "Fertility support using acupuncture and herbal medicine to enhance reproductive health."
-      },
-      {
-        "title": "Prostatic Disorder",
-        "description": "Treatment for prostate-related conditions using traditional medicine techniques."
-      },
-      {
-        "title": "Digestive System Disorder",
-        "description": "Comprehensive treatment for digestive issues including stomach, intestinal, and bowel disorders."
-      },
-      {
-        "title": "Crohn's Disease",
-        "description": "Supportive care for inflammatory bowel disease using acupuncture and herbal treatments."
-      },
-      {
-        "title": "Stroke",
-        "description": "Post-stroke rehabilitation support through acupuncture to aid recovery and improve function."
-      },
-      {
-        "title": "Bell's Palsy",
-        "description": "Facial nerve paralysis treatment using specialized acupuncture techniques for recovery."
-      },
-      {
-        "title": "Diabetes",
-        "description": "Complementary treatment for diabetes management through traditional Korean medicine."
-      },
-      {
-        "title": "High Blood Pressure",
-        "description": "Natural approaches to blood pressure management using acupuncture and lifestyle guidance."
-      },
-      {
-        "title": "Weight Management",
-        "description": "Holistic weight management program combining acupuncture, herbal medicine, and dietary guidance."
-      },
-      {
-        "title": "Skin Issues",
-        "description": "Treatment for various skin conditions including eczema, psoriasis, and other dermatological issues."
-      },
-      {
-        "title": "Insomnia",
-        "description": "Natural sleep disorder treatment using acupuncture and herbal medicine for better rest."
-      }
-    ]
+    "menstrualCramps": {
+      "title": "Menstrual Cramps",
+      "description": "Targeted acupuncture treatment for menstrual pain relief and regulation of menstrual cycle disorders."
+    },
+    "acneTreatment": {
+      "title": "Acne Treatment",
+      "description": "Holistic approach to skin health using acupuncture and herbal medicine to address root causes of acne."
+    },
+    "holisticHealing": {
+      "title": "Holistic Mind & Body Healing",
+      "description": "Comprehensive treatment addressing both mental and physical wellness through traditional Korean medicine."
+    },
+    "anxiety": {
+      "title": "Anxiety",
+      "description": "Natural anxiety relief through acupuncture and herbal treatments to restore mental balance and calm."
+    },
+    "painManagement": {
+      "title": "Pain Management",
+      "description": "Effective pain relief for chronic and acute conditions using traditional acupuncture techniques."
+    },
+    "arthritis": {
+      "title": "Arthritis, Muscle & Joint Pain",
+      "description": "Specialized treatment for inflammatory conditions and musculoskeletal pain relief."
+    },
+    "parkinsons": {
+      "title": "Parkinson's Disease",
+      "description": "Supportive care for Parkinson's symptoms using acupuncture to improve quality of life."
+    },
+    "menopause": {
+      "title": "Women's Menopause",
+      "description": "Natural menopause symptom management through traditional Korean medicine approaches."
+    },
+    "infertility": {
+      "title": "Infertility",
+      "description": "Fertility support using acupuncture and herbal medicine to enhance reproductive health."
+    },
+    "prostatic": {
+      "title": "Prostatic Disorder",
+      "description": "Treatment for prostate-related conditions using traditional medicine techniques."
+    },
+    "digestive": {
+      "title": "Digestive System Disorder",
+      "description": "Comprehensive treatment for digestive issues including stomach, intestinal, and bowel disorders."
+    },
+    "crohns": {
+      "title": "Crohn's Disease",
+      "description": "Supportive care for inflammatory bowel disease using acupuncture and herbal treatments."
+    },
+    "stroke": {
+      "title": "Stroke",
+      "description": "Post-stroke rehabilitation support through acupuncture to aid recovery and improve function."
+    },
+    "bellsPalsy": {
+      "title": "Bell's Palsy",
+      "description": "Facial nerve paralysis treatment using specialized acupuncture techniques for recovery."
+    },
+    "diabetes": {
+      "title": "Diabetes",
+      "description": "Complementary treatment for diabetes management through traditional Korean medicine."
+    },
+    "highBloodPressure": {
+      "title": "High Blood Pressure",
+      "description": "Natural approaches to blood pressure management using acupuncture and lifestyle guidance."
+    },
+    "weightManagement": {
+      "title": "Weight Management",
+      "description": "Holistic weight management program combining acupuncture, herbal medicine, and dietary guidance."
+    },
+    "skinIssues": {
+      "title": "Skin Issues",
+      "description": "Treatment for various skin conditions including eczema, psoriasis, and other dermatological issues."
+    },
+    "insomnia": {
+      "title": "Insomnia",
+      "description": "Natural sleep disorder treatment using acupuncture and herbal medicine for better rest."
+    }
   },
   "about": {
     "title": "About Woori Acupuncture - Your Trusted Korean Medicine Clinic",
@@ -123,6 +121,11 @@
     "phone2": "(714) 261-0605",
     "hoursTitle": "Business Hours",
     "hours": "Monday-Friday: 9:00 AM - 6:00 PM<br />Saturday: 9:00 AM - 3:00 PM<br />Sunday: Closed"
+  },
+  "cta": {
+    "title": "Ready to Start Your Healing Journey?",
+    "description": "Contact Woori Acupuncture today to schedule your consultation and learn how traditional Korean medicine can help with {condition}.",
+    "button": "Schedule Appointment"
   },
   "footer": "&copy; 2025 Woori Acupuncture. All rights reserved."
 }

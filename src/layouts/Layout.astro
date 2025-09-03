@@ -27,7 +27,7 @@ const description = translations.site.description
 const keywords = translations.site.keywords
 const siteName = translations.site.name
 const lang = locale
-const localeForMeta = locale === "en" ? "en_US" : "es_ES"
+const localeForMeta = locale === "en" ? "en" : "es"
 const ogTitle = title
 const ogDescription = description
 const ogImage = "https://wooriacu.com/woori-acu-clinic-1.jpg"
@@ -144,8 +144,8 @@ const jsonLd = {
     </script>
   </head>
   <body>
-    <Header locale={locale}/>
+    <Header locale={locale} />
     <slot />
-    <Footer locale={locale}/>
+    <Footer locale={locale} />
   </body>
 </html>
