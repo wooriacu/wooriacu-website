@@ -1,0 +1,131 @@
+{
+  "site": {
+    "name": "Woori Acupuncture",
+    "description": "Professional acupuncture and traditional Korean herbal medicine services in Riverside, California. Treating menstrual cramps, acne, anxiety, pain management, arthritis, Parkinson's, menopause, infertility, digestive disorders, stroke recovery, diabetes, high blood pressure, weight management, skin issues, and insomnia.",
+    "keywords": "acupuncture, Korean medicine, herbal medicine, pain relief, traditional medicine, Riverside CA, natural healing, wellness, holistic health, menstrual cramps, acne treatment, anxiety relief, arthritis treatment, Parkinson's disease, menopause, infertility, digestive disorders, stroke recovery, Bell's palsy, diabetes, high blood pressure, weight management, skin conditions, insomnia, Crohn's disease"
+  },
+  "nav": {
+    "home": "Home",
+    "services": "Services",
+    "about": "About",
+    "contact": "Contact",
+    "english": "English",
+    "spanish": "Español"
+  },
+  "hero": {
+    "title": "Woori Acupuncture",
+    "subtitle": "Restore Your Health with Traditional Korean Medicine & Modern Acupuncture",
+    "cta": "Schedule Appointment"
+  },
+  "services": {
+    "title": "Our Professional Services",
+    "acupuncture": {
+      "title": "Traditional Acupuncture Therapy",
+      "description": "Experience authentic traditional acupuncture for effective pain relief and overall health improvement through precise needle placement at specific therapeutic acupoints. Our licensed practitioners use sterile, single-use needles for safe and effective treatment."
+    },
+    "herbal": {
+      "title": "Korean Herbal Medicine",
+      "description": "Receive personalized herbal prescriptions using time-tested traditional Korean medicine principles for comprehensive treatment. Our custom herbal formulas target the root cause of health issues for lasting wellness."
+    }
+  },
+  "conditions": {
+    "title": "Conditions We Treat",
+    "menstrualCramps": {
+      "title": "Menstrual Cramps",
+      "description": "Targeted acupuncture treatment for menstrual pain relief and regulation of menstrual cycle disorders."
+    },
+    "acneTreatment": {
+      "title": "Acne Treatment",
+      "description": "Holistic approach to skin health using acupuncture and herbal medicine to address root causes of acne."
+    },
+    "holisticHealing": {
+      "title": "Holistic Mind & Body Healing",
+      "description": "Comprehensive treatment addressing both mental and physical wellness through traditional Korean medicine."
+    },
+    "anxiety": {
+      "title": "Anxiety",
+      "description": "Natural anxiety relief through acupuncture and herbal treatments to restore mental balance and calm."
+    },
+    "painManagement": {
+      "title": "Pain Management",
+      "description": "Effective pain relief for chronic and acute conditions using traditional acupuncture techniques."
+    },
+    "arthritis": {
+      "title": "Arthritis, Muscle & Joint Pain",
+      "description": "Specialized treatment for inflammatory conditions and musculoskeletal pain relief."
+    },
+    "parkinsons": {
+      "title": "Parkinson's Disease",
+      "description": "Supportive care for Parkinson's symptoms using acupuncture to improve quality of life."
+    },
+    "menopause": {
+      "title": "Women's Menopause",
+      "description": "Natural menopause symptom management through traditional Korean medicine approaches."
+    },
+    "infertility": {
+      "title": "Infertility",
+      "description": "Fertility support using acupuncture and herbal medicine to enhance reproductive health."
+    },
+    "prostatic": {
+      "title": "Prostatic Disorder",
+      "description": "Treatment for prostate-related conditions using traditional medicine techniques."
+    },
+    "digestive": {
+      "title": "Digestive System Disorder",
+      "description": "Comprehensive treatment for digestive issues including stomach, intestinal, and bowel disorders."
+    },
+    "crohns": {
+      "title": "Crohn's Disease",
+      "description": "Supportive care for inflammatory bowel disease using acupuncture and herbal treatments."
+    },
+    "stroke": {
+      "title": "Stroke",
+      "description": "Post-stroke rehabilitation support through acupuncture to aid recovery and improve function."
+    },
+    "bellsPalsy": {
+      "title": "Bell's Palsy",
+      "description": "Facial nerve paralysis treatment using specialized acupuncture techniques for recovery."
+    },
+    "diabetes": {
+      "title": "Diabetes",
+      "description": "Complementary treatment for diabetes management through traditional Korean medicine."
+    },
+    "highBloodPressure": {
+      "title": "High Blood Pressure",
+      "description": "Natural approaches to blood pressure management using acupuncture and lifestyle guidance."
+    },
+    "weightManagement": {
+      "title": "Weight Management",
+      "description": "Holistic weight management program combining acupuncture, herbal medicine, and dietary guidance."
+    },
+    "skinIssues": {
+      "title": "Skin Issues",
+      "description": "Treatment for various skin conditions including eczema, psoriasis, and other dermatological issues."
+    },
+    "insomnia": {
+      "title": "Insomnia",
+      "description": "Natural sleep disorder treatment using acupuncture and herbal medicine for better rest."
+    }
+  },
+  "about": {
+    "title": "About Woori Acupuncture - Your Trusted Korean Medicine Clinic",
+    "content1": "<strong>Woori Acupuncture</strong> combines authentic traditional Korean medicine with modern therapeutic techniques to provide the highest quality care for our patients in Riverside, California. With years of experience and specialized training, we offer personalized treatments tailored to each patient's individual condition for fundamental health recovery and long-term wellness.",
+    "content2": "Our holistic approach focuses on treating the root cause of health issues rather than just managing symptoms, promoting natural healing processes and sustainable wellness. We are committed to helping you achieve optimal health through time-tested traditional methods."
+  },
+  "contact": {
+    "title": "Contact Woori Acupuncture - Schedule Your Appointment",
+    "location": "Clinic Location",
+    "address": "3579 Arlington Ave Suite 900<br />Riverside, California 92506",
+    "phoneTitle": "Phone Numbers",
+    "phone": "(951) 777-1011",
+    "phone2": "(714) 261-0605",
+    "hoursTitle": "Business Hours",
+    "hours": "Monday-Friday: 9:00 AM - 6:00 PM<br />Saturday: 9:00 AM - 3:00 PM<br />Sunday: Closed"
+  },
+  "cta": {
+    "title": "Ready to Start Your Healing Journey?",
+    "description": "Contact Woori Acupuncture today to schedule your consultation and learn how traditional Korean medicine can help with {condition}.",
+    "button": "Schedule Appointment"
+  },
+  "footer": "&copy; 2025 Woori Acupuncture. All rights reserved."
+}

@@ -1,0 +1,16 @@
+---
+import type { Locale } from "../utils/i18n"
+import { t } from "../utils/i18n"
+
+interface Props {
+  locale: Locale
+}
+
+const { locale } = Astro.props
+---
+
+<footer>
+  <div class="container">
+    <p set:html={t(locale, "footer")} />
+  </div>
+</footer>

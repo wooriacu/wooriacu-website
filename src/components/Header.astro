@@ -1,0 +1,43 @@
+---
+import { getRelativeLocaleUrl } from "astro:i18n"
+import type { Locale } from "../utils/i18n"
+import { t } from "../utils/i18n"
+
+interface Props {
+  locale: Locale
+  currentPath?: string
+}
+
+const { locale, currentPath = "" } = Astro.props
+
+// Get localized navigation URLs
+const homeUrl = getRelativeLocaleUrl(locale, "/")
+const alternateLocale = locale === "en" ? "es" : "en"
+const alternateUrl = getRelativeLocaleUrl(alternateLocale, currentPath)
+---
+
+<header>
+  <nav>
+    <div class="logo">{t(locale, "site.name")}</div>
+    <ul class="nav-center">
+      <li><a href={homeUrl + "#home"}>{t(locale, "nav.home")}</a></li>
+      <li><a href={homeUrl + "#services"}>{t(locale, "nav.services")}</a></li>
+      <li><a href={homeUrl + "#about"}>{t(locale, "nav.about")}</a></li>
+      <li><a href={homeUrl + "#contact"}>{t(locale, "nav.contact")}</a></li>
+    </ul>
+    <div class="language-selector">
+      <a
+        href={getRelativeLocaleUrl("en", currentPath)}
+        class={locale === "en" ? "active" : ""}
+      >
+        {t(locale, "nav.english")}
+      </a>
+      <a
+        href={getRelativeLocaleUrl("es", currentPath)}
+        class={locale === "es" ? "active" : ""}
+      >
+        {t(locale, "nav.spanish")}
+      </a>
+    </div>
+  </nav>
+</header>

@@ -1,0 +1,24 @@
+---
+import { getCollection } from "astro:content"
+
+export async function getStaticPaths() {
+  const conditionsEntries = await getCollection("conditions")
+  return conditionsEntries.map((entry) => ({
+    params: { slug: entry.slug },
+    props: { entry },
+  }))
+}
+
+const { entry } = Astro.props
+const { Content } = await entry.render()
+
+// Dynamic layout import based on frontmatter
+const layoutName = entry.data.layout || "ConditionLayout"
+const Layout = await import(`../layouts/${layoutName}.astro`).then(
+  (m) => m.default
+)
+---
+
+<Layout frontmatter={entry.data}>
+  <Content />
+</Layout>

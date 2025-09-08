@@ -1,0 +1,33 @@
+---
+import type { Locale } from "../utils/i18n"
+import { t } from "../utils/i18n"
+
+interface Props {
+  locale: Locale
+}
+
+const { locale } = Astro.props
+---
+
+<section class="section about" id="about" aria-labelledby="about-heading">
+  <div class="container">
+    <h2 id="about-heading">{t(locale, "about.title")}</h2>
+    <div class="about-content">
+      <div class="about-text">
+        <p set:html={t(locale, "about.content1")} />
+        <p>{t(locale, "about.content2")}</p>
+      </div>
+      <div class="about-image">
+        <img
+          src="/woori-acu-clinic-1.jpg"
+          alt={locale === "es"
+            ? "Sala de tratamiento profesional de acupuntura en la clínica Woori Acupuntura en Riverside, California"
+            : "Professional acupuncture treatment room at Woori Acupuncture clinic in Riverside, California"}
+          loading="lazy"
+          width="400"
+          height="300"
+        />
+      </div>
+    </div>
+  </div>
+</section>
