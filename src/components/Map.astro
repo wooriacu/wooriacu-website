@@ -1,19 +1,19 @@
 ---
 export interface Props {
-  lat?: number;
-  lng?: number;
-  zoom?: number;
-  height?: string;
-  address?: string;
+  lat?: number
+  lng?: number
+  zoom?: number
+  height?: string
+  address?: string
 }
 
-const { 
-  lat = 33.9533, 
-  lng = -117.3962, 
-  zoom = 15, 
+const {
+  lat = 33.9533,
+  lng = -117.3962,
+  zoom = 15,
   height = "300px",
-  address = "3579 Arlington Ave Suite 900, Riverside, CA 92506"
-} = Astro.props;
+  address = "3579 Arlington Ave Suite 900, Riverside, CA 92506",
+} = Astro.props
 ---
 
 <div class="map-container" style={`height: ${height}`}>
@@ -22,41 +22,46 @@ const {
 
 <script define:vars={{ lat, lng, zoom, address }}>
   // Load Leaflet CSS and JS
-  const link = document.createElement('link');
-  link.rel = 'stylesheet';
-  link.href = 'https://unpkg.com/leaflet@1.9.4/dist/leaflet.css';
-  document.head.appendChild(link);
+  const link = document.createElement("link")
+  link.rel = "stylesheet"
+  link.href = "https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+  document.head.appendChild(link)
 
-  const script = document.createElement('script');
-  script.src = 'https://unpkg.com/leaflet@1.9.4/dist/leaflet.js';
-  script.onload = function() {
+  const script = document.createElement("script")
+  script.src = "https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+  script.onload = function () {
     // Initialize the map
-    const map = L.map('map').setView([lat, lng], zoom);
+    const map = L.map("map").setView([lat, lng], zoom)
 
     // Add OpenStreetMap tiles
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
       maxZoom: 19,
-      attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-    }).addTo(map);
+      attribution:
+        '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+    }).addTo(map)
 
     // Add marker for the clinic location
-    const marker = L.marker([lat, lng]).addTo(map);
-    
+    const marker = L.marker([lat, lng]).addTo(map)
+
     // Add popup with clinic information
-    marker.bindPopup(`
+    marker
+      .bindPopup(
+        `
       <div style="text-align: center; padding: 5px;">
         <strong>Woori Acupuncture</strong><br>
         ${address}<br>
         <a href="tel:+19517771011" style="color: #0066cc;">(951) 777-1011</a>
       </div>
-    `).openPopup();
+    `
+      )
+      .openPopup()
 
     // Make map responsive
     setTimeout(() => {
-      map.invalidateSize();
-    }, 100);
-  };
-  document.head.appendChild(script);
+      map.invalidateSize()
+    }, 100)
+  }
+  document.head.appendChild(script)
 </script>
 
 <style>
