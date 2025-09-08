@@ -1,0 +1,119 @@
+---
+import type { Locale } from "../utils/i18n"
+import { t, getTranslations } from "../utils/i18n"
+
+interface Props {
+  locale: Locale
+}
+
+const { locale } = Astro.props
+const translations = getTranslations(locale)
+---
+
+<section class="section" id="services" aria-labelledby="services-heading">
+  <div class="container">
+    <h2 id="services-heading">{t(locale, "services.title")}</h2>
+    <div class="services">
+      <article class="service-card">
+        <div class="icon" aria-hidden="true">⚕️</div>
+        <h3>{t(locale, "services.acupuncture.title")}</h3>
+        <p>{t(locale, "services.acupuncture.description")}</p>
+      </article>
+
+      <article class="service-card">
+        <div class="icon" aria-hidden="true">🌿</div>
+        <h3>{t(locale, "services.herbal.title")}</h3>
+        <p>{t(locale, "services.herbal.description")}</p>
+      </article>
+    </div>
+
+    <h3
+      style="text-align: center; margin: 2rem 0; color: #2c5530; font-size: 1.8rem;"
+    >
+      {t(locale, "conditions.title")}
+    </h3>
+
+    <div class="services">
+      {
+        translations.conditions.list.map((condition: any) => (
+          <article class="service-card">
+            <div class="icon" aria-hidden="true">
+              {condition.title === "Menstrual Cramps" ||
+              condition.title === "Cólicos Menstruales"
+                ? "🌙"
+                : condition.title === "Acne Treatment" ||
+                    condition.title === "Tratamiento del Acné"
+                  ? "🌟"
+                  : condition.title === "Holistic Mind & Body Healing" ||
+                      condition.title === "Sanación Holística de Mente y Cuerpo"
+                    ? "☯️"
+                    : condition.title === "Anxiety" ||
+                        condition.title === "Ansiedad"
+                      ? "🕊️"
+                      : condition.title === "Pain Management" ||
+                          condition.title === "Manejo del Dolor"
+                        ? "⚡"
+                        : condition.title.includes("Arthritis") ||
+                            condition.title.includes("Artritis")
+                          ? "🦵"
+                          : condition.title.includes("Parkinson")
+                            ? "🤝"
+                            : condition.title.includes("Menopause") ||
+                                condition.title.includes("Menopausia")
+                              ? "🌺"
+                              : condition.title === "Infertility" ||
+                                  condition.title === "Infertilidad"
+                                ? "🤱"
+                                : condition.title.includes("Prostatic") ||
+                                    condition.title.includes("Prostático")
+                                  ? "👨"
+                                  : condition.title.includes("Digestive") ||
+                                      condition.title.includes("Digestivo")
+                                    ? "🥗"
+                                    : condition.title.includes("Crohn")
+                                      ? "🔬"
+                                      : condition.title.includes("Stroke") ||
+                                          condition.title.includes(
+                                            "Cerebrovascular"
+                                          )
+                                        ? "🧬"
+                                        : condition.title.includes("Bell")
+                                          ? "😶"
+                                          : condition.title === "Diabetes"
+                                            ? "🍯"
+                                            : condition.title.includes(
+                                                  "Blood Pressure"
+                                                ) ||
+                                                condition.title.includes(
+                                                  "Presión Arterial"
+                                                )
+                                              ? "❤️"
+                                              : condition.title.includes(
+                                                    "Weight"
+                                                  ) ||
+                                                  condition.title.includes(
+                                                    "Peso"
+                                                  )
+                                                ? "🏃"
+                                                : condition.title.includes(
+                                                      "Skin"
+                                                    ) ||
+                                                    condition.title.includes(
+                                                      "Piel"
+                                                    )
+                                                  ? "🎭"
+                                                  : condition.title ===
+                                                        "Insomnia" ||
+                                                      condition.title ===
+                                                        "Insomnio"
+                                                    ? "😴"
+                                                    : "⚕️"}
+            </div>
+            <h3>{condition.title}</h3>
+            <p>{condition.description}</p>
+          </article>
+        ))
+      }
+    </div>
+  </div>
+</section>

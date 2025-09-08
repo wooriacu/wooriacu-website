@@ -1,0 +1,128 @@
+{
+  "site": {
+    "name": "Woori Acupuntura",
+    "description": "Servicios profesionales de acupuntura y medicina herbal tradicional coreana en Riverside, California. Tratamos cólicos menstruales, acné, ansiedad, manejo del dolor, artritis, Parkinson, menopausia, infertilidad, trastornos digestivos, rehabilitación post-ictus, diabetes, presión arterial alta, manejo del peso, problemas de piel e insomnio.",
+    "keywords": "acupuntura, medicina coreana, medicina herbal, alivio del dolor, medicina tradicional, Riverside CA, curación natural, bienestar, salud holística, cólicos menstruales, tratamiento acné, alivio ansiedad, tratamiento artritis, enfermedad Parkinson, menopausia, infertilidad, trastornos digestivos, rehabilitación ictus, parálisis Bell, diabetes, presión arterial alta, manejo peso, problemas piel, insomnio, enfermedad Crohn"
+  },
+  "nav": {
+    "home": "Inicio",
+    "services": "Servicios",
+    "about": "Acerca",
+    "contact": "Contacto",
+    "english": "English",
+    "spanish": "Español"
+  },
+  "hero": {
+    "title": "Woori Acupuntura",
+    "subtitle": "Restaure su Salud con Medicina Tradicional Coreana y Acupuntura Moderna",
+    "cta": "Programar Cita"
+  },
+  "services": {
+    "title": "Nuestros Servicios",
+    "acupuncture": {
+      "title": "Acupuntura Tradicional",
+      "description": "Acupuntura tradicional para alivio del dolor y mejora de la salud general mediante la colocación precisa de agujas en puntos específicos."
+    },
+    "herbal": {
+      "title": "Medicina Herbal Coreana",
+      "description": "Prescripciones herbales personalizadas utilizando principios de medicina tradicional coreana para tratamiento integral."
+    }
+  },
+  "conditions": {
+    "title": "Condiciones que Tratamos",
+    "list": [
+      {
+        "title": "Cólicos Menstruales",
+        "description": "Tratamiento de acupuntura dirigido para el alivio del dolor menstrual y la regulación de trastornos del ciclo menstrual."
+      },
+      {
+        "title": "Tratamiento del Acné",
+        "description": "Enfoque holístico para la salud de la piel usando acupuntura y medicina herbal para abordar las causas raíz del acné."
+      },
+      {
+        "title": "Sanación Holística de Mente y Cuerpo",
+        "description": "Tratamiento integral que aborda tanto el bienestar mental como físico a través de la medicina tradicional coreana."
+      },
+      {
+        "title": "Ansiedad",
+        "description": "Alivio natural de la ansiedad a través de acupuntura y tratamientos herbales para restaurar el equilibrio mental y la calma."
+      },
+      {
+        "title": "Manejo del Dolor",
+        "description": "Tratamiento efectivo del dolor para condiciones crónicas y agudas usando técnicas tradicionales de acupuntura."
+      },
+      {
+        "title": "Artritis, Dolor Muscular y Articular",
+        "description": "Tratamiento especializado para condiciones inflamatorias y alivio del dolor musculoesquelético."
+      },
+      {
+        "title": "Enfermedad de Parkinson",
+        "description": "Cuidado de apoyo para los síntomas de Parkinson usando acupuntura para mejorar la calidad de vida."
+      },
+      {
+        "title": "Menopausia Femenina",
+        "description": "Manejo natural de los síntomas de la menopausia a través de enfoques de medicina tradicional coreana."
+      },
+      {
+        "title": "Infertilidad",
+        "description": "Apoyo a la fertilidad usando acupuntura y medicina herbal para mejorar la salud reproductiva."
+      },
+      {
+        "title": "Trastorno Prostático",
+        "description": "Tratamiento para condiciones relacionadas con la próstata usando técnicas de medicina tradicional."
+      },
+      {
+        "title": "Trastorno del Sistema Digestivo",
+        "description": "Tratamiento integral para problemas digestivos incluyendo trastornos estomacales, intestinales y del colon."
+      },
+      {
+        "title": "Enfermedad de Crohn",
+        "description": "Cuidado de apoyo para la enfermedad inflamatoria intestinal usando acupuntura y tratamientos herbales."
+      },
+      {
+        "title": "Accidente Cerebrovascular",
+        "description": "Apoyo de rehabilitación post-ictus a través de acupuntura para ayudar en la recuperación y mejorar la función."
+      },
+      {
+        "title": "Parálisis de Bell",
+        "description": "Tratamiento de parálisis del nervio facial usando técnicas especializadas de acupuntura para la recuperación."
+      },
+      {
+        "title": "Diabetes",
+        "description": "Tratamiento complementario para el manejo de la diabetes a través de la medicina tradicional coreana."
+      },
+      {
+        "title": "Presión Arterial Alta",
+        "description": "Enfoques naturales para el manejo de la presión arterial usando acupuntura y guía de estilo de vida."
+      },
+      {
+        "title": "Manejo del Peso",
+        "description": "Programa holístico de manejo del peso combinando acupuntura, medicina herbal y guía dietética."
+      },
+      {
+        "title": "Problemas de la Piel",
+        "description": "Tratamiento para varias condiciones de la piel incluyendo eczema, psoriasis y otros problemas dermatológicos."
+      },
+      {
+        "title": "Insomnio",
+        "description": "Tratamiento natural de trastornos del sueño usando acupuntura y medicina herbal para mejor descanso."
+      }
+    ]
+  },
+  "about": {
+    "title": "Acerca de Nosotros",
+    "content1": "Combinamos la medicina tradicional coreana con técnicas terapéuticas modernas para brindar la mejor atención a nuestros pacientes. Con años de experiencia, ofrecemos tratamientos personalizados adaptados a la condición individual de cada paciente para una recuperación fundamental de la salud.",
+    "content2": "Nuestro enfoque se centra en tratar la causa raíz de los problemas de salud en lugar de solo los síntomas, promoviendo el bienestar a largo plazo y los procesos naturales de curación."
+  },
+  "contact": {
+    "title": "Información de Contacto",
+    "location": "Ubicación",
+    "address": "3579 Arlington Ave Suite 900<br />Riverside, California 92506",
+    "phoneTitle": "Teléfono",
+    "phone": "(951) 777-1011",
+    "phone2": "(714) 261-0605",
+    "hoursTitle": "Horarios",
+    "hours": "Lunes-Viernes: 9:00 AM - 6:00 PM<br />Sábado: 9:00 AM - 3:00 PM<br />Domingo: Cerrado"
+  },
+  "footer": "&copy; 2025 Woori Acupuntura. Todos los derechos reservados."
+}

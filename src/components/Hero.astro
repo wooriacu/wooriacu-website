@@ -1,0 +1,18 @@
+---
+import type { Locale } from "../utils/i18n"
+import { t } from "../utils/i18n"
+
+interface Props {
+  locale: Locale
+}
+
+const { locale } = Astro.props
+---
+
+<section class="hero" id="home">
+  <div class="container">
+    <h1>{t(locale, "hero.title")}</h1>
+    <p class="subtitle">{t(locale, "hero.subtitle")}</p>
+    <a href="#contact" class="cta-button">{t(locale, "hero.cta")}</a>
+  </div>
+</section>

@@ -1,0 +1,53 @@
+---
+import Map from "./Map.astro"
+import type { Locale } from "../utils/i18n"
+import { t } from "../utils/i18n"
+
+interface Props {
+  locale: Locale
+}
+
+const { locale } = Astro.props
+---
+
+<section
+  class="section contact-info"
+  id="contact"
+  aria-labelledby="contact-heading"
+>
+  <div class="container">
+    <h2 id="contact-heading" style="color: white;">
+      {t(locale, "contact.title")}
+    </h2>
+    <div class="contact-grid">
+      <article class="contact-item">
+        <div class="icon" aria-hidden="true">📍</div>
+        <h3>{t(locale, "contact.location")}</h3>
+        <address set:html={t(locale, "contact.address")} />
+      </article>
+
+      <article class="contact-item">
+        <div class="icon" aria-hidden="true">📞</div>
+        <h3>{t(locale, "contact.phoneTitle")}</h3>
+        <p>
+          Office: <a href="tel:+19517771011" rel="nofollow"
+            >{t(locale, "contact.phone")}</a
+          ><br />
+          Mobile: <a href="tel:+17142610605" rel="nofollow"
+            >{t(locale, "contact.phone2")}</a
+          ><br />
+        </p>
+      </article>
+
+      <article class="contact-item">
+        <div class="icon" aria-hidden="true">🕐</div>
+        <h3>{t(locale, "contact.hoursTitle")}</h3>
+        <div set:html={t(locale, "contact.hours")} />
+      </article>
+    </div>
+
+    <div class="map-section">
+      <Map lat={33.9466568} lng={-117.3915209} zoom={15} height="500px" />
+    </div>
+  </div>
+</section>

@@ -1,35 +1,36 @@
 ---
 import "../styles/global.css"
+import { getRelativeLocaleUrl } from "astro:i18n"
+import type { Locale } from "../utils/i18n"
+import { getTranslations } from "../utils/i18n"
+import Header from "../components/Header.astro"
+import Footer from "../components/Footer.astro"
 
 export interface Props {
-  title: string
-  description: string
-  lang: string
-  canonical: string
-  siteName: string
-  locale: string
-  hreflangEn: string
-  hreflangEs: string
-  keywords?: string
-  ogTitle?: string
-  ogDescription?: string
-  ogImage?: string
+  locale: Locale
+  currentPath?: string
 }
 
-const {
-  title,
-  description,
-  lang,
-  canonical,
-  siteName,
-  locale,
-  hreflangEn,
-  hreflangEs,
-  keywords,
-  ogTitle = title,
-  ogDescription = description,
-  ogImage = "https://wooriacu.com/woori-acu-clinic-1.jpg",
-} = Astro.props
+const { locale, currentPath = "" } = Astro.props
+
+// Get translations for the current locale
+const translations = getTranslations(locale)
+
+// Generate canonical and alternate URLs
+const canonical = `https://wooriacu.com${getRelativeLocaleUrl(locale, currentPath)}`
+const hreflangEn = `https://wooriacu.com${getRelativeLocaleUrl("en", currentPath)}`
+const hreflangEs = `https://wooriacu.com${getRelativeLocaleUrl("es", currentPath)}`
+
+// SEO data from translations
+const title = `${translations.site.name} - ${translations.hero.subtitle}`
+const description = translations.site.description
+const keywords = translations.site.keywords
+const siteName = translations.site.name
+const lang = locale
+const localeForMeta = locale === "en" ? "en_US" : "es_ES"
+const ogTitle = title
+const ogDescription = description
+const ogImage = "https://wooriacu.com/woori-acu-clinic-1.jpg"
 
 // JSON-LD structured data
 const jsonLd = {
@@ -103,7 +104,7 @@ const jsonLd = {
     <meta property="og:description" content={ogDescription} />
     <meta property="og:image" content={ogImage} />
     <meta property="og:site_name" content={siteName} />
-    <meta property="og:locale" content={locale} />
+    <meta property="og:locale" content={localeForMeta} />
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
@@ -143,6 +144,8 @@ const jsonLd = {
     </script>
   </head>
   <body>
+    <Header locale={locale}/>
     <slot />
+    <Footer locale={locale}/>
   </body>
 </html>
