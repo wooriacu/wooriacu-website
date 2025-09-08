@@ -1,3 +1,5 @@
+@import "tailwindcss";
+
 /* Global Reset and Base Styles */
 * {
   margin: 0;
@@ -79,10 +81,7 @@ nav {
 
 /* Hero Section */
 .hero {
-  background: linear-gradient(
-      rgba(44, 85, 48, 0.8),
-      rgba(74, 124, 89, 0.8)
-    ),
+  background: linear-gradient(rgba(44, 85, 48, 0.8), rgba(74, 124, 89, 0.8)),
     url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><rect fill="%234a7c59" width="1200" height="600"/></svg>');
   background-size: cover;
   background-position: center;
