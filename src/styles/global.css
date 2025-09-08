@@ -15,7 +15,7 @@
 /* Base layer customizations */
 @layer base {
   * {
-    @apply m-0 p-0 box-border;
+    @apply m-0 box-border p-0;
   }
 
   html {
@@ -24,7 +24,7 @@
 
   body {
     font-family: var(--font-sans);
-    @apply leading-relaxed text-[var(--color-text)] bg-[var(--color-bg)];
+    @apply bg-[var(--color-bg)] leading-relaxed text-[var(--color-text)];
   }
 }
 
@@ -32,12 +32,16 @@
 @layer components {
   /* Header Styles */
   header {
-    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-light) 100%);
-    @apply text-white py-4 shadow-[var(--shadow-sm)];
+    background: linear-gradient(
+      135deg,
+      var(--color-primary) 0%,
+      var(--color-primary-light) 100%
+    );
+    @apply py-4 text-white shadow-[var(--shadow-sm)];
   }
 
   nav {
-    @apply max-w-6xl mx-auto flex justify-between items-center px-8;
+    @apply mx-auto flex max-w-6xl items-center justify-between px-8;
   }
 
   .logo {
@@ -57,7 +61,7 @@
   }
 
   .language-selector a {
-    @apply text-white no-underline py-2 px-4 rounded font-bold transition-colors duration-300 hover:bg-white/20;
+    @apply rounded px-4 py-2 font-bold text-white no-underline transition-colors duration-300 hover:bg-white/20;
   }
 
   .language-selector .active {
@@ -66,23 +70,24 @@
 
   /* Hero Section */
   .hero {
-    background: linear-gradient(rgba(44, 85, 48, 0.8), rgba(74, 124, 89, 0.8)),
+    background:
+      linear-gradient(rgba(44, 85, 48, 0.8), rgba(74, 124, 89, 0.8)),
       url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><rect fill="%234a7c59" width="1200" height="600"/></svg>');
-    @apply bg-cover bg-center text-white text-center py-24 px-8;
+    @apply bg-cover bg-center px-8 py-24 text-center text-white;
   }
 
   .hero h1 {
-    @apply text-6xl mb-4;
+    @apply mb-4 text-6xl;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
   }
 
   .hero .subtitle {
-    @apply text-xl mb-8 opacity-95;
+    @apply mb-8 text-xl opacity-95;
   }
 
   .cta-button {
     background: var(--color-accent);
-    @apply inline-block text-white py-4 px-8 no-underline rounded font-bold transition-colors duration-300 mt-4;
+    @apply mt-4 inline-block rounded px-8 py-4 font-bold text-white no-underline transition-colors duration-300;
   }
 
   .cta-button:hover {
@@ -91,7 +96,7 @@
 
   /* Layout Components */
   .container {
-    @apply max-w-6xl mx-auto px-8;
+    @apply mx-auto max-w-6xl px-8;
   }
 
   .section {
@@ -99,24 +104,24 @@
   }
 
   .section h2 {
-    @apply text-center text-4xl mb-12 text-[var(--color-primary)];
+    @apply mb-12 text-center text-4xl text-[var(--color-primary)];
   }
 
   /* Services Section */
   .services {
-    @apply grid grid-cols-[repeat(auto-fit,minmax(300px,1fr))] gap-8 mt-8;
+    @apply mt-8 grid grid-cols-[repeat(auto-fit,minmax(300px,1fr))] gap-8;
   }
 
   .service-card {
-    @apply bg-white p-8 rounded-xl shadow-[var(--shadow-md)] text-center transition-transform duration-300 hover:-translate-y-2;
+    @apply rounded-xl bg-white p-8 text-center shadow-[var(--shadow-md)] transition-transform duration-300 hover:-translate-y-2;
   }
 
   .service-card .icon {
-    @apply text-5xl mb-4;
+    @apply mb-4 text-5xl;
   }
 
   .service-card h3 {
-    @apply text-[var(--color-primary)] mb-4;
+    @apply mb-4 text-[var(--color-primary)];
   }
 
   /* About Section */
@@ -125,7 +130,7 @@
   }
 
   .about-content {
-    @apply grid grid-cols-2 gap-12 items-center;
+    @apply grid grid-cols-2 items-center gap-12;
   }
 
   .about-text {
@@ -133,11 +138,11 @@
   }
 
   .about-image {
-    @apply h-72 rounded-xl overflow-hidden;
+    @apply h-72 overflow-hidden rounded-xl;
   }
 
   .about-image img {
-    @apply w-full h-full object-cover rounded-xl;
+    @apply h-full w-full rounded-xl object-cover;
   }
 
   /* SEO-friendly link styles */
@@ -147,7 +152,7 @@
 
   /* Contact Section */
   .contact-info {
-    @apply bg-[var(--color-primary)] text-white text-center;
+    @apply bg-[var(--color-primary)] text-center text-white;
   }
 
   .contact-grid {
@@ -159,7 +164,7 @@
   }
 
   .contact-item .icon {
-    @apply text-3xl mb-4;
+    @apply mb-4 text-3xl;
   }
 
   /* Map Section */
@@ -169,7 +174,7 @@
 
   /* Footer */
   footer {
-    @apply bg-neutral-900 text-white text-center py-8;
+    @apply bg-neutral-900 py-8 text-center text-white;
   }
 }
 

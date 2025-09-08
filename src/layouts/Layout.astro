@@ -1,19 +1,19 @@
 ---
-import "../styles/global.css";
+import "../styles/global.css"
 
 export interface Props {
-  title: string;
-  description: string;
-  lang: string;
-  canonical: string;
-  siteName: string;
-  locale: string;
-  hreflangEn: string;
-  hreflangEs: string;
-  keywords?: string;
-  ogTitle?: string;
-  ogDescription?: string;
-  ogImage?: string;
+  title: string
+  description: string
+  lang: string
+  canonical: string
+  siteName: string
+  locale: string
+  hreflangEn: string
+  hreflangEs: string
+  keywords?: string
+  ogTitle?: string
+  ogDescription?: string
+  ogImage?: string
 }
 
 const {
@@ -29,7 +29,7 @@ const {
   ogTitle = title,
   ogDescription = description,
   ogImage = "https://wooriacu.com/woori-acu-clinic-1.jpg",
-} = Astro.props;
+} = Astro.props
 
 // JSON-LD structured data
 const jsonLd = {
@@ -76,7 +76,7 @@ const jsonLd = {
     "Herbal Medicine",
   ],
   priceRange: "$$",
-};
+}
 ---
 
 <!doctype html>
@@ -138,8 +138,8 @@ const jsonLd = {
       window.plausible =
         window.plausible ||
         function () {
-          (window.plausible.q = window.plausible.q || []).push(arguments);
-        };
+          ;(window.plausible.q = window.plausible.q || []).push(arguments)
+        }
     </script>
   </head>
   <body>
