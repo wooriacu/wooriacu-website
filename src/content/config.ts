@@ -6,10 +6,9 @@ const conditionsCollection = defineCollection({
     title: z.string(),
     description: z.string(),
     icon: z.string().optional(),
-    titleEs: z.string().optional(),
-    descriptionEs: z.string().optional(),
     locale: z.string().default("en"),
     canonical: z.string().optional(),
+    layout: z.string().default("ConditionLayout"),
   }),
 })
 
