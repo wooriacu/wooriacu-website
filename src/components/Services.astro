@@ -35,17 +35,21 @@ const homeUrl = getRelativeLocaleUrl(locale, "/")
     </h3>
 
     <div class="services">
-      <article class="service-card">
-        <div class="icon" aria-hidden="true">🌙</div>
-        <h3>{t(locale, "conditions.menstrualCramps.title")}</h3>
-        <p>{t(locale, "conditions.menstrualCramps.description")}</p>
-      </article>
+      <a href={getRelativeLocaleUrl(locale, "menstrual-cramps-and-irregularities")}>
+        <article class="service-card">
+          <div class="icon" aria-hidden="true">🌙</div>
+          <h3>{t(locale, "conditions.menstrualCramps.title")}</h3>
+          <p>{t(locale, "conditions.menstrualCramps.description")}</p>
+        </article>
+      </a>
 
-      <article class="service-card">
-        <div class="icon" aria-hidden="true">🌟</div>
-        <h3>{t(locale, "conditions.acneTreatment.title")}</h3>
-        <p>{t(locale, "conditions.acneTreatment.description")}</p>
-      </article>
+      <a href={getRelativeLocaleUrl(locale, "acne-treatment")}>
+        <article class="service-card">
+          <div class="icon" aria-hidden="true">🌟</div>
+          <h3>{t(locale, "conditions.acneTreatment.title")}</h3>
+          <p>{t(locale, "conditions.acneTreatment.description")}</p>
+        </article>
+      </a>
 
       <article class="service-card">
         <div class="icon" aria-hidden="true">☯️</div>
