@@ -18,7 +18,7 @@ const alternateUrl = getRelativeLocaleUrl(alternateLocale, currentPath)
 
 <header>
   <nav>
-    <div class="logo">{t(locale, "site.name")}</div>
+    <a href={homeUrl} class="logo">{t(locale, "site.name")}</a>
     <ul class="nav-center">
       <li><a href={homeUrl + "#home"}>{t(locale, "nav.home")}</a></li>
       <li><a href={homeUrl + "#services"}>{t(locale, "nav.services")}</a></li>

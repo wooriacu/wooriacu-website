@@ -35,7 +35,12 @@ const homeUrl = getRelativeLocaleUrl(locale, "/")
     </h3>
 
     <div class="services">
-      <a href={getRelativeLocaleUrl(locale, "menstrual-cramps-and-irregularities")}>
+      <a
+        href={getRelativeLocaleUrl(
+          locale,
+          "menstrual-cramps-and-irregularities"
+        )}
+      >
         <article class="service-card">
           <div class="icon" aria-hidden="true">🌙</div>
           <h3>{t(locale, "conditions.menstrualCramps.title")}</h3>

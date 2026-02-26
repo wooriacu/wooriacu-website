@@ -1,0 +1,18 @@
+# Lefthook configuration
+# https://lefthook.dev/configuration/
+# run `brew install lefthook` to install lefthook
+# then `lefthook install` to set up git hooks
+
+pre-push:
+  parallel: true
+  commands:
+    # Check Markdown formatting with Prettier
+    prettier-check:
+      glob: "*.{js,ts,jsx,tsx,json,css,md,astro}"
+      run: npx prettier --check .
+      fail_text: "Prettier linting failed. Run 'npm run format' to fix."
+
+    # Build Next.js app
+    astro-build:
+      run: npm run build
+      fail_text: "Astro build failed. Run 'npm run build' to see errors."
