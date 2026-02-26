@@ -15,6 +15,14 @@ const pages = [
     h1: "Cólicos Menstruales e Irregularidades",
   },
   { path: "/es/womans-menopause/", h1: "Menopausia Femenina" },
+  {
+    path: "/workers-compensation/",
+    h1: "Workers' Compensation Acupuncture Care",
+  },
+  {
+    path: "/es/workers-compensation/",
+    h1: "Atención de Acupuntura para Compensación Laboral",
+  },
 ]
 
 for (const { path, h1 } of pages) {
@@ -41,6 +49,14 @@ test.describe("navigation buttons", () => {
       await expect(page).toHaveURL(new RegExp(`/${hash}$`))
     })
   }
+
+  test('clicking "Workers\' Comp" navigates to workers-compensation', async ({
+    page,
+  }) => {
+    await page.goto("/")
+    await page.getByRole("link", { name: "Workers' Comp" }).click()
+    await expect(page).toHaveURL(/\/workers-compensation\//)
+  })
 
   test("clicking logo navigates to homepage", async ({ page }) => {
     await page.goto("/acne-treatment/")

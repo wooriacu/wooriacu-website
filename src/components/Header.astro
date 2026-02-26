@@ -22,6 +22,11 @@ const alternateUrl = getRelativeLocaleUrl(alternateLocale, currentPath)
     <ul class="nav-center">
       <li><a href={homeUrl + "#home"}>{t(locale, "nav.home")}</a></li>
       <li><a href={homeUrl + "#services"}>{t(locale, "nav.services")}</a></li>
+      <li>
+        <a href={getRelativeLocaleUrl(locale, "/workers-compensation")}
+          >{t(locale, "nav.workersComp")}</a
+        >
+      </li>
       <li><a href={homeUrl + "#about"}>{t(locale, "nav.about")}</a></li>
       <li><a href={homeUrl + "#contact"}>{t(locale, "nav.contact")}</a></li>
     </ul>

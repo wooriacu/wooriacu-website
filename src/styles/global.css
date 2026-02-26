@@ -49,11 +49,11 @@
   }
 
   .nav-center {
-    @apply flex list-none gap-8;
+    @apply flex list-none gap-2;
   }
 
   .nav-center a {
-    @apply rounded px-4 py-2 text-white no-underline transition-colors duration-300 hover:bg-white/20;
+    @apply rounded px-3 py-2 text-white no-underline transition-colors duration-300 hover:bg-white/20;
   }
 
   .language-selector {
