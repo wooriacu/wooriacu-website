@@ -1,5 +1,4 @@
 ---
-layout: "ConditionLayout"
 title: "Menopausia Femenina"
 description: "Tratamiento natural de la menopausia a través de la acupuntura tradicional coreana y la medicina herbal. Alivio efectivo para sofocos, cambios de humor, problemas de sueño y otros síntomas de la menopausia en Riverside, CA."
 icon: "🌺"

@@ -1,5 +1,4 @@
 ---
-layout: "ConditionLayout"
 title: "Cólicos Menstruales e Irregularidades"
 description: "Tratamiento natural para cólicos menstruales e irregularidades a través de la acupuntura tradicional coreana y la medicina herbal. Alivio efectivo para dismenorrea, ciclos irregulares y dolor menstrual en Riverside, CA."
 icon: "🌸"

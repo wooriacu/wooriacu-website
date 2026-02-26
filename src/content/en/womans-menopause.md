@@ -1,5 +1,4 @@
 ---
-layout: "ConditionLayout"
 title: "Women's Menopause"
 description: "Natural menopause treatment through traditional Korean acupuncture and herbal medicine. Effective relief for hot flashes, mood swings, sleep issues, and other menopause symptoms in Riverside, CA."
 icon: "🌺"

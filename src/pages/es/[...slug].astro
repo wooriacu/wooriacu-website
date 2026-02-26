@@ -1,9 +1,9 @@
 ---
 import { getCollection } from "astro:content"
-import ConditionLayout from "../layouts/ConditionLayout.astro"
+import ConditionLayout from "../../layouts/ConditionLayout.astro"
 
 export async function getStaticPaths() {
-  const entries = await getCollection("en")
+  const entries = await getCollection("es")
   return entries.map((entry) => ({
     params: { slug: entry.slug },
     props: { entry },
@@ -12,8 +12,10 @@ export async function getStaticPaths() {
 
 const { entry } = Astro.props
 const { Content } = await entry.render()
+
+const frontmatter = { ...entry.data, locale: "es" }
 ---
 
-<ConditionLayout frontmatter={entry.data}>
+<ConditionLayout frontmatter={frontmatter}>
   <Content />
 </ConditionLayout>

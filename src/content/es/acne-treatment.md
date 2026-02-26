@@ -1,5 +1,4 @@
 ---
-layout: "ConditionLayout"
 title: "Tratamiento del Acné"
 description: "Tratamiento natural del acné a través de la acupuntura tradicional coreana y la medicina herbal. Alivio efectivo para el acné inflamatorio, cicatrices y brotes hormonales en Riverside, CA."
 icon: "🌟"

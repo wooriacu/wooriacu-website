@@ -1,5 +1,4 @@
 ---
-layout: "ConditionLayout"
 title: "Acne Treatment"
 description: "Natural acne treatment through traditional Korean acupuncture and herbal medicine. Effective relief for inflammatory acne, scarring, and hormonal breakouts in Riverside, CA."
 icon: "🌟"

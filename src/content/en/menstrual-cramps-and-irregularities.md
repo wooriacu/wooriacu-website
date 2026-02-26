@@ -1,5 +1,4 @@
 ---
-layout: "ConditionLayout"
 title: "Menstrual Cramps and Irregularities"
 description: "Natural treatment for menstrual cramps and irregularities through traditional Korean acupuncture and herbal medicine. Effective relief for dysmenorrhea, irregular cycles, and menstrual pain in Riverside, CA."
 icon: "🌸"
