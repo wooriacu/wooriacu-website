@@ -25,3 +25,6 @@ pnpm-debug.log*
 
 # tmp
 tmp/
+
+# playwright
+test-results/
