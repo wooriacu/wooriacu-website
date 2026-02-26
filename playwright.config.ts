@@ -1,13 +1,19 @@
 import { defineConfig } from "@playwright/test"
 
+const baseURL = process.env.BASE_URL || "http://localhost:4321"
+
 export default defineConfig({
   testDir: "./playwright",
-  webServer: {
-    command: "npm run preview",
-    port: 4321,
-    reuseExistingServer: true,
-  },
+  ...(process.env.BASE_URL
+    ? {}
+    : {
+        webServer: {
+          command: "npm run preview",
+          port: 4321,
+          reuseExistingServer: true,
+        },
+      }),
   use: {
-    baseURL: "http://localhost:4321",
+    baseURL,
   },
 })
