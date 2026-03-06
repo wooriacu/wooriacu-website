@@ -23,6 +23,11 @@ const alternateUrl = getRelativeLocaleUrl(alternateLocale, currentPath)
       <li><a href={homeUrl + "#home"}>{t(locale, "nav.home")}</a></li>
       <li><a href={homeUrl + "#services"}>{t(locale, "nav.services")}</a></li>
       <li>
+        <a href={getRelativeLocaleUrl(locale, "/insurance")}
+          >{t(locale, "nav.insurance")}</a
+        >
+      </li>
+      <li>
         <a href={getRelativeLocaleUrl(locale, "/workers-compensation")}
           >{t(locale, "nav.workersComp")}</a
         >
