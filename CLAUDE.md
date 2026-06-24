@@ -19,7 +19,7 @@ All commands are run from the project root:
 
 ### Core Framework
 
-- **Astro 5.12.3** - Static site generator with component-based architecture
+- **Astro 7** - Static site generator with component-based architecture
 - **TypeScript** - Configured with strict settings extending astro/tsconfigs/strict
 - **CSS** - Global styles with component-scoped styling
 
