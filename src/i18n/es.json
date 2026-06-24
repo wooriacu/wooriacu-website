@@ -32,6 +32,11 @@
   },
   "conditions": {
     "title": "Condiciones que Tratamos",
+    "groups": {
+      "general": "Cuidado General",
+      "womens-health": "Salud Femenina",
+      "mens-health": "Salud Masculina"
+    },
     "menstrualCramps": {
       "title": "Cólicos Menstruales",
       "description": "Tratamiento de acupuntura dirigido para el alivio del dolor menstrual y la regulación de trastornos del ciclo menstrual."

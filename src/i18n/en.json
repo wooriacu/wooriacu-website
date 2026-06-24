@@ -32,6 +32,11 @@
   },
   "conditions": {
     "title": "Conditions We Treat",
+    "groups": {
+      "general": "General Care",
+      "womens-health": "Women's Health",
+      "mens-health": "Men's Health"
+    },
     "menstrualCramps": {
       "title": "Menstrual Cramps",
       "description": "Targeted acupuncture treatment for menstrual pain relief and regulation of menstrual cycle disorders."

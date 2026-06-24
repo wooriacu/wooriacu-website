@@ -3,18 +3,15 @@ import { test, expect } from "@playwright/test"
 const pages = [
   { path: "/", h1: "Woori Acupuncture" },
   { path: "/es/", h1: "Woori Acupuntura" },
-  { path: "/acne-treatment/", h1: "Acne Treatment" },
+  { path: "/acne-care/", h1: "Acne Care" },
+  { path: "/menstrual-cramps-care/", h1: "Menstrual Cramps Care" },
+  { path: "/menopause-care/", h1: "Menopause Care" },
+  { path: "/es/acne-care/", h1: "Cuidado del Acné" },
   {
-    path: "/menstrual-cramps-and-irregularities/",
-    h1: "Menstrual Cramps and Irregularities",
+    path: "/es/menstrual-cramps-care/",
+    h1: "Cuidado para los Cólicos Menstruales",
   },
-  { path: "/womans-menopause/", h1: "Women's Menopause" },
-  { path: "/es/acne-treatment/", h1: "Tratamiento del Acné" },
-  {
-    path: "/es/menstrual-cramps-and-irregularities/",
-    h1: "Cólicos Menstruales e Irregularidades",
-  },
-  { path: "/es/womans-menopause/", h1: "Menopausia Femenina" },
+  { path: "/es/menopause-care/", h1: "Cuidado de la Menopausia" },
   {
     path: "/workers-compensation/",
     h1: "Workers' Compensation Acupuncture Care",
@@ -59,7 +56,7 @@ test.describe("navigation buttons", () => {
   })
 
   test("clicking logo navigates to homepage", async ({ page }) => {
-    await page.goto("/acne-treatment/")
+    await page.goto("/acne-care/")
     await page.locator("a.logo").click()
     await expect(page).toHaveURL("/")
   })

@@ -7,6 +7,9 @@ const articleSchema = z.object({
   icon: z.string().optional(),
   locale: z.string().default("en"),
   canonical: z.string().optional(),
+  // Present only on "Conditions We Treat" pages; omitted on standalone
+  // pages like insurance and workers-compensation.
+  category: z.enum(["general", "womens-health", "mens-health"]).optional(),
 })
 
 export const collections = {

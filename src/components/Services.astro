@@ -1,4 +1,5 @@
 ---
+import { getCollection } from "astro:content"
 import { getRelativeLocaleUrl } from "astro:i18n"
 import type { Locale } from "../utils/i18n"
 import { t } from "../utils/i18n"
@@ -8,7 +9,23 @@ interface Props {
 }
 
 const { locale } = Astro.props
-const homeUrl = getRelativeLocaleUrl(locale, "/")
+
+// Build the "Conditions We Treat" cards from the content collection.
+// Only entries with a `category` are conditions; standalone pages like
+// insurance and workers-compensation are intentionally excluded.
+const entries = await getCollection(locale)
+const conditions = entries
+  .filter((entry) => entry.data.category)
+  .sort((a, b) => a.data.title.localeCompare(b.data.title))
+
+const groupOrder = ["general", "womens-health", "mens-health"] as const
+const groups = groupOrder
+  .map((key) => ({
+    key,
+    label: t(locale, `conditions.groups.${key}`),
+    items: conditions.filter((entry) => entry.data.category === key),
+  }))
+  .filter((group) => group.items.length > 0)
 ---
 
 <section class="section" id="services" aria-labelledby="services-heading">
@@ -34,131 +51,27 @@ const homeUrl = getRelativeLocaleUrl(locale, "/")
       {t(locale, "conditions.title")}
     </h3>
 
-    <div class="services">
-      <a
-        href={getRelativeLocaleUrl(
-          locale,
-          "menstrual-cramps-and-irregularities"
-        )}
-      >
-        <article class="service-card">
-          <div class="icon" aria-hidden="true">🌙</div>
-          <h3>{t(locale, "conditions.menstrualCramps.title")}</h3>
-          <p>{t(locale, "conditions.menstrualCramps.description")}</p>
-        </article>
-      </a>
-
-      <a href={getRelativeLocaleUrl(locale, "acne-treatment")}>
-        <article class="service-card">
-          <div class="icon" aria-hidden="true">🌟</div>
-          <h3>{t(locale, "conditions.acneTreatment.title")}</h3>
-          <p>{t(locale, "conditions.acneTreatment.description")}</p>
-        </article>
-      </a>
-
-      <article class="service-card">
-        <div class="icon" aria-hidden="true">☯️</div>
-        <h3>{t(locale, "conditions.holisticHealing.title")}</h3>
-        <p>{t(locale, "conditions.holisticHealing.description")}</p>
-      </article>
-
-      <article class="service-card">
-        <div class="icon" aria-hidden="true">🕊️</div>
-        <h3>{t(locale, "conditions.anxiety.title")}</h3>
-        <p>{t(locale, "conditions.anxiety.description")}</p>
-      </article>
-
-      <article class="service-card">
-        <div class="icon" aria-hidden="true">⚡</div>
-        <h3>{t(locale, "conditions.painManagement.title")}</h3>
-        <p>{t(locale, "conditions.painManagement.description")}</p>
-      </article>
-
-      <article class="service-card">
-        <div class="icon" aria-hidden="true">🦵</div>
-        <h3>{t(locale, "conditions.arthritis.title")}</h3>
-        <p>{t(locale, "conditions.arthritis.description")}</p>
-      </article>
-
-      <article class="service-card">
-        <div class="icon" aria-hidden="true">🤝</div>
-        <h3>{t(locale, "conditions.parkinsons.title")}</h3>
-        <p>{t(locale, "conditions.parkinsons.description")}</p>
-      </article>
-
-      <a href={getRelativeLocaleUrl(locale, "womans-menopause")}>
-        <article class="service-card">
-          <div class="icon" aria-hidden="true">🌺</div>
-          <h3>{t(locale, "conditions.menopause.title")}</h3>
-          <p>{t(locale, "conditions.menopause.description")}</p>
-        </article>
-      </a>
-
-      <article class="service-card">
-        <div class="icon" aria-hidden="true">🤱</div>
-        <h3>{t(locale, "conditions.infertility.title")}</h3>
-        <p>{t(locale, "conditions.infertility.description")}</p>
-      </article>
-
-      <article class="service-card">
-        <div class="icon" aria-hidden="true">👨</div>
-        <h3>{t(locale, "conditions.prostatic.title")}</h3>
-        <p>{t(locale, "conditions.prostatic.description")}</p>
-      </article>
-
-      <article class="service-card">
-        <div class="icon" aria-hidden="true">🥗</div>
-        <h3>{t(locale, "conditions.digestive.title")}</h3>
-        <p>{t(locale, "conditions.digestive.description")}</p>
-      </article>
-
-      <article class="service-card">
-        <div class="icon" aria-hidden="true">🔬</div>
-        <h3>{t(locale, "conditions.crohns.title")}</h3>
-        <p>{t(locale, "conditions.crohns.description")}</p>
-      </article>
-
-      <article class="service-card">
-        <div class="icon" aria-hidden="true">🧬</div>
-        <h3>{t(locale, "conditions.stroke.title")}</h3>
-        <p>{t(locale, "conditions.stroke.description")}</p>
-      </article>
-
-      <article class="service-card">
-        <div class="icon" aria-hidden="true">😶</div>
-        <h3>{t(locale, "conditions.bellsPalsy.title")}</h3>
-        <p>{t(locale, "conditions.bellsPalsy.description")}</p>
-      </article>
-
-      <article class="service-card">
-        <div class="icon" aria-hidden="true">🍯</div>
-        <h3>{t(locale, "conditions.diabetes.title")}</h3>
-        <p>{t(locale, "conditions.diabetes.description")}</p>
-      </article>
-
-      <article class="service-card">
-        <div class="icon" aria-hidden="true">❤️</div>
-        <h3>{t(locale, "conditions.highBloodPressure.title")}</h3>
-        <p>{t(locale, "conditions.highBloodPressure.description")}</p>
-      </article>
-
-      <article class="service-card">
-        <div class="icon" aria-hidden="true">🏃</div>
-        <h3>{t(locale, "conditions.weightManagement.title")}</h3>
-        <p>{t(locale, "conditions.weightManagement.description")}</p>
-      </article>
-
-      <article class="service-card">
-        <div class="icon" aria-hidden="true">🎭</div>
-        <h3>{t(locale, "conditions.skinIssues.title")}</h3>
-        <p>{t(locale, "conditions.skinIssues.description")}</p>
-      </article>
-
-      <article class="service-card">
-        <div class="icon" aria-hidden="true">😴</div>
-        <h3>{t(locale, "conditions.insomnia.title")}</h3>
-        <p>{t(locale, "conditions.insomnia.description")}</p>
-      </article>
-    </div>
+    {
+      groups.map((group) => (
+        <Fragment>
+          <h4 style="text-align: center; margin: 1.5rem 0 1rem; color: #4a7c59; font-size: 1.35rem;">
+            {group.label}
+          </h4>
+          <div class="services">
+            {group.items.map((item) => (
+              <a href={getRelativeLocaleUrl(locale, item.id)}>
+                <article class="service-card">
+                  <div class="icon" aria-hidden="true">
+                    {item.data.icon}
+                  </div>
+                  <h3>{item.data.title}</h3>
+                  <p>{item.data.description}</p>
+                </article>
+              </a>
+            ))}
+          </div>
+        </Fragment>
+      ))
+    }
   </div>
 </section>

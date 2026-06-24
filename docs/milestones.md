@@ -56,6 +56,12 @@
 - [x] Add new menu navigation and worker's comp page
 - [x] Add insurance page listing accepted plans
 
+## Milestone 10: New contents
+
+- [x] Convert client docx files into bilingual Markdown content (26 EN + 26 ES)
+- [x] Group "Conditions We Treat" cards by category (General, Women's, Men's)
+- [x] Generate condition cards from the content collection instead of hardcoding
+
 ## Backlog
 
 - [ ] Add online appointment booking
